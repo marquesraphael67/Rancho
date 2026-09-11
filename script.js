@@ -1,28 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
+    /* =====================================================
        MENU MOBILE
-    ========================= */
+    ===================================================== */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
 
     if (menuToggle && navMenu) {
 
         menuToggle.addEventListener("click", () => {
+
             navMenu.classList.toggle("show");
+
         });
 
     }
 
 
-    /* =========================
+    /* =====================================================
        PRODUTOS
-    ========================= */
+    ===================================================== */
 
     const products = [
 
-        // HAMBÚRGUERES
+        /* =========================
+           HAMBÚRGUERES
+        ========================= */
 
         {
             id: 1,
@@ -30,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 25,
-            description: "Hambúrguer bovino da casa, muçarela e pão francês bola."
+            description:
+                "Hambúrguer bovino da casa, muçarela e pão francês bola.",
+            customizable: true
         },
 
         {
@@ -39,7 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 30,
-            description: "Hambúrguer bovino da casa, muçarela e bacon da casa."
+            description:
+                "Hambúrguer bovino da casa, muçarela e bacon da casa.",
+            customizable: true
         },
 
         {
@@ -48,7 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 30,
-            description: "Hambúrguer bovino, muçarela, alface americana, tomate e maionese da casa."
+            description:
+                "Hambúrguer bovino, muçarela, alface americana, tomate e maionese da casa.",
+            customizable: true
         },
 
         {
@@ -57,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 35,
-            description: "Hambúrguer bovino, muçarela, bacon, alface americana, tomate e maionese da casa."
+            description:
+                "Hambúrguer bovino, muçarela, bacon, alface americana, tomate e maionese da casa.",
+            customizable: true
         },
 
         {
@@ -66,7 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 33.5,
-            description: "Filé mignon em bifes, muçarela, alface americana e tomate, pão baguete."
+            description:
+                "Filé mignon em bifes, muçarela, alface americana e tomate, pão baguete.",
+            customizable: true
         },
 
         {
@@ -75,7 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 34,
-            description: "Hambúrguer de cordeiro, muçarela, maionese de hortelã, rúcula e tomate."
+            description:
+                "Hambúrguer de cordeiro, muçarela, maionese de hortelã, rúcula e tomate.",
+            customizable: true
         },
 
         {
@@ -84,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 47,
-            description: "Hambúrguer bovino, muçarela, bacon, calabresa, pimentão, cebola, ovo frito, maionese e tomate."
+            description:
+                "Hambúrguer bovino, muçarela, bacon, calabresa, pimentão, cebola, ovo frito, maionese e tomate.",
+            customizable: true
         },
 
         {
@@ -93,7 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 34.5,
-            description: "Hambúrguer bovino, queijo fresco grelhado com orégano, maionese da casa e tomate."
+            description:
+                "Hambúrguer bovino, queijo fresco grelhado com orégano, maionese da casa e tomate.",
+            customizable: true
         },
 
         {
@@ -102,7 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 35,
-            description: "Hambúrguer bovino, american cheese, Polenghi empanado e frito, geleia de abacaxi com pimenta."
+            description:
+                "Hambúrguer bovino, american cheese, Polenghi empanado e frito, geleia de abacaxi com pimenta.",
+            customizable: true
         },
 
         {
@@ -111,7 +137,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 44,
-            description: "Hambúrguer bovino, queijo fresco, bacon, geleia de abacaxi com pimenta e rúcula."
+            description:
+                "Hambúrguer bovino, queijo fresco, bacon, geleia de abacaxi com pimenta e rúcula.",
+            customizable: true
         },
 
         {
@@ -120,7 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 44,
-            description: "Filé mignon, gorgonzola, provolone, muçarela, Catupiry, alface, rúcula e tomate."
+            description:
+                "Filé mignon, gorgonzola, provolone, muçarela, Catupiry, alface, rúcula e tomate.",
+            customizable: true
         },
 
         {
@@ -129,7 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 44,
-            description: "Filé mignon, creme Carbonada com bacon, muçarela, Catupiry e creme de leite."
+            description:
+                "Filé mignon, creme Carbonada com bacon, muçarela, Catupiry e creme de leite.",
+            customizable: true
         },
 
         {
@@ -138,7 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 29.5,
-            description: "Copa lombo suína, muçarela, cebola caramelizada, shoyu, rúcula, tomate e cebolinha."
+            description:
+                "Copa lombo suína, muçarela, cebola caramelizada, shoyu, rúcula, tomate e cebolinha.",
+            customizable: true
         },
 
         {
@@ -147,7 +181,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 38,
-            description: "Hambúrguer bovino, bacon, calabresa, alho, muçarela, maionese, tomate e orégano."
+            description:
+                "Hambúrguer bovino, bacon, calabresa, alho, muçarela, maionese, tomate e orégano.",
+            customizable: true
         },
 
         {
@@ -156,7 +192,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 27,
-            description: "Sobrecoxa desossada, muçarela, molho de mostarda e mel, rúcula e tomate."
+            description:
+                "Sobrecoxa desossada, muçarela, molho de mostarda e mel, rúcula e tomate.",
+            customizable: true
         },
 
         {
@@ -165,7 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 35,
-            description: "Sobrecoxa desossada, bacon da casa, muçarela, Catupiry Original, alface e tomate."
+            description:
+                "Sobrecoxa desossada, bacon da casa, muçarela, Catupiry Original, alface e tomate.",
+            customizable: true
         },
 
         {
@@ -174,7 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 36,
-            description: "Sobrecoxa desossada, creme de gorgonzola, muçarela, rúcula e tomate seco."
+            description:
+                "Sobrecoxa desossada, creme de gorgonzola, muçarela, rúcula e tomate seco.",
+            customizable: true
         },
 
         {
@@ -183,7 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 39,
-            description: "2 carnes + 2x muçarela."
+            description:
+                "2 carnes + 2x muçarela.",
+            customizable: true
         },
 
         {
@@ -192,7 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 49,
-            description: "2 carnes + 2x muçarela + bacon da casa."
+            description:
+                "2 carnes + 2x muçarela + bacon da casa.",
+            customizable: true
         },
 
         {
@@ -201,7 +247,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 49,
-            description: "2 carnes, muçarela, alface americana, tomate e maionese da casa."
+            description:
+                "2 carnes, muçarela, alface americana, tomate e maionese da casa.",
+            customizable: true
         },
 
         {
@@ -210,7 +258,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 59,
-            description: "2 carnes, muçarela, bacon, alface americana, tomate e maionese."
+            description:
+                "2 carnes, muçarela, bacon, alface americana, tomate e maionese.",
+            customizable: true
         },
 
         {
@@ -219,11 +269,15 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "hamburgueres",
             categoryName: "Hambúrgueres",
             price: 61,
-            description: "2 filés mignon, muçarela, alface americana e tomate."
+            description:
+                "2 filés mignon, muçarela, alface americana e tomate.",
+            customizable: true
         },
 
 
-        // KIDS
+        /* =========================
+           RANCHO KIDS
+        ========================= */
 
         {
             id: 30,
@@ -231,7 +285,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 22,
-            description: "Hambúrguer bovino, muçarela e pão francês bola."
+            description:
+                "Hambúrguer bovino, muçarela e pão francês bola.",
+            customizable: true
         },
 
         {
@@ -240,7 +296,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 25,
-            description: "Hambúrguer bovino, muçarela, bacon e pão francês bola."
+            description:
+                "Hambúrguer bovino, muçarela, bacon e pão francês bola.",
+            customizable: true
         },
 
         {
@@ -249,7 +307,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 26,
-            description: "Hambúrguer bovino, muçarela, alface americana, tomate e maionese."
+            description:
+                "Hambúrguer bovino, muçarela, alface americana, tomate e maionese.",
+            customizable: true
         },
 
         {
@@ -258,7 +318,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 30,
-            description: "Hambúrguer bovino, muçarela, bacon, alface, tomate e maionese."
+            description:
+                "Hambúrguer bovino, muçarela, bacon, alface, tomate e maionese.",
+            customizable: true
         },
 
         {
@@ -267,7 +329,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 23.5,
-            description: "Sobrecoxa de frango desossada, muçarela, alface, tomate e maionese."
+            description:
+                "Sobrecoxa de frango desossada, muçarela, alface, tomate e maionese.",
+            customizable: true
         },
 
         {
@@ -276,7 +340,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 18,
-            description: "4 unidades de nuggets da casa."
+            description:
+                "4 unidades de nuggets da casa.",
+            customizable: false
         },
 
         {
@@ -285,11 +351,15 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "kids",
             categoryName: "Rancho Kids",
             price: 8,
-            description: "100g de fritas in natura."
+            description:
+                "100g de fritas in natura.",
+            customizable: false
         },
 
 
-        // PORÇÕES
+        /* =========================
+           PORÇÕES
+        ========================= */
 
         {
             id: 40,
@@ -297,7 +367,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 10,
-            description: "Pão de alho preparado pela casa."
+            description:
+                "Pão de alho preparado pela casa.",
+            customizable: false
         },
 
         {
@@ -306,7 +378,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 8,
-            description: "Porção pequena de fritas."
+            description:
+                "Porção pequena de fritas.",
+            customizable: false
         },
 
         {
@@ -315,7 +389,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 22,
-            description: "Porção grande de fritas."
+            description:
+                "Porção grande de fritas.",
+            customizable: false
         },
 
         {
@@ -324,7 +400,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 12,
-            description: "Fritas com bacon."
+            description:
+                "Fritas com bacon.",
+            customizable: false
         },
 
         {
@@ -333,7 +411,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 29,
-            description: "Porção grande de fritas com bacon."
+            description:
+                "Porção grande de fritas com bacon.",
+            customizable: false
         },
 
         {
@@ -342,7 +422,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 15,
-            description: "Fritas com Catupiry e bacon."
+            description:
+                "Fritas com Catupiry e bacon.",
+            customizable: false
         },
 
         {
@@ -351,7 +433,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 33,
-            description: "Porção grande de fritas com Catupiry e bacon."
+            description:
+                "Porção grande de fritas com Catupiry e bacon.",
+            customizable: false
         },
 
         {
@@ -360,7 +444,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 15,
-            description: "Fritas com muçarela e bacon."
+            description:
+                "Fritas com muçarela e bacon.",
+            customizable: false
         },
 
         {
@@ -369,7 +455,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 33,
-            description: "Porção grande de fritas com muçarela e bacon."
+            description:
+                "Porção grande de fritas com muçarela e bacon.",
+            customizable: false
         },
 
         {
@@ -378,7 +466,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 15,
-            description: "Fritas com creme Carbonada."
+            description:
+                "Fritas com creme Carbonada.",
+            customizable: false
         },
 
         {
@@ -387,7 +477,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 33,
-            description: "Porção grande de fritas com creme Carbonada."
+            description:
+                "Porção grande de fritas com creme Carbonada.",
+            customizable: false
         },
 
         {
@@ -396,7 +488,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 86,
-            description: "Mignon com fritas. Serve até 2 pessoas."
+            description:
+                "Mignon com fritas. Serve até 2 pessoas.",
+            customizable: false
         },
 
         {
@@ -405,7 +499,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 62,
-            description: "Frango acompanhado de fritas."
+            description:
+                "Frango acompanhado de fritas.",
+            customizable: false
         },
 
         {
@@ -414,7 +510,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 21,
-            description: "5 bolinhos da casa."
+            description:
+                "5 bolinhos da casa.",
+            customizable: false
         },
 
         {
@@ -423,7 +521,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 40,
-            description: "10 bolinhos da casa."
+            description:
+                "10 bolinhos da casa.",
+            customizable: false
         },
 
         {
@@ -432,7 +532,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 18,
-            description: "4 unidades."
+            description:
+                "4 unidades.",
+            customizable: false
         },
 
         {
@@ -441,11 +543,15 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "porcoes",
             categoryName: "Porções",
             price: 33,
-            description: "8 unidades."
+            description:
+                "8 unidades.",
+            customizable: false
         },
 
 
-        // BEBIDAS
+        /* =========================
+           BEBIDAS
+        ========================= */
 
         {
             id: 60,
@@ -453,7 +559,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 3,
-            description: "Água mineral sem gás."
+            description:
+                "Água mineral sem gás.",
+            customizable: false
         },
 
         {
@@ -462,7 +570,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 3.5,
-            description: "Água mineral com gás."
+            description:
+                "Água mineral com gás.",
+            customizable: false
         },
 
         {
@@ -471,7 +581,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 10,
-            description: "500ml. Laranja ou limão."
+            description:
+                "500ml. Laranja ou limão.",
+            customizable: false
         },
 
         {
@@ -480,7 +592,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 10,
-            description: "500ml. Maracujá ou morango, com água."
+            description:
+                "500ml. Maracujá ou morango, com água.",
+            customizable: false
         },
 
         {
@@ -489,7 +603,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 11,
-            description: "500ml. Maracujá ou morango com leite."
+            description:
+                "500ml. Maracujá ou morango com leite.",
+            customizable: false
         },
 
         {
@@ -498,7 +614,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 7,
-            description: "Coca-Cola, Coca-Cola Zero, Sprite, Fanta ou Guaraná Antarctica."
+            description:
+                "Coca-Cola, Coca-Cola Zero, Sprite, Fanta ou Guaraná Antarctica.",
+            customizable: false
         },
 
         {
@@ -507,7 +625,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 10,
-            description: "Coca-Cola, Coca-Cola Zero ou Guaraná Antarctica."
+            description:
+                "Coca-Cola, Coca-Cola Zero ou Guaraná Antarctica.",
+            customizable: false
         },
 
         {
@@ -516,7 +636,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 11,
-            description: "Coca-Cola, Coca-Cola Zero ou Guaraná Antarctica."
+            description:
+                "Coca-Cola, Coca-Cola Zero ou Guaraná Antarctica.",
+            customizable: false
         },
 
         {
@@ -525,7 +647,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 15,
-            description: "Coca-Cola 2 litros."
+            description:
+                "Coca-Cola 2 litros.",
+            customizable: false
         },
 
         {
@@ -534,7 +658,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 13,
-            description: "Guaraná Antarctica 2 litros."
+            description:
+                "Guaraná Antarctica 2 litros.",
+            customizable: false
         },
 
         {
@@ -543,11 +669,15 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "bebidas",
             categoryName: "Bebidas",
             price: 8.5,
-            description: "Tubaína 2 litros."
+            description:
+                "Tubaína 2 litros.",
+            customizable: false
         },
 
 
-        // SOBREMESAS
+        /* =========================
+           SOBREMESAS
+        ========================= */
 
         {
             id: 80,
@@ -555,7 +685,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 22,
-            description: "Torta holandesa."
+            description:
+                "Torta holandesa.",
+            customizable: false
         },
 
         {
@@ -564,7 +696,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 18,
-            description: "Chocolate e creme branco."
+            description:
+                "Chocolate e creme branco.",
+            customizable: false
         },
 
         {
@@ -573,7 +707,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 18,
-            description: "Chocolate, morango e creme branco."
+            description:
+                "Chocolate, morango e creme branco.",
+            customizable: false
         },
 
         {
@@ -582,7 +718,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 18,
-            description: "Chocolate + café + caramelo."
+            description:
+                "Chocolate + café + caramelo.",
+            customizable: false
         },
 
         {
@@ -591,7 +729,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 8,
-            description: "Doce de leite."
+            description:
+                "Doce de leite.",
+            customizable: false
         },
 
         {
@@ -600,7 +740,9 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 20,
-            description: "Fatia de bolo de brigadeiro."
+            description:
+                "Fatia de bolo de brigadeiro.",
+            customizable: false
         },
 
         {
@@ -609,15 +751,17 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "sobremesas",
             categoryName: "Sobremesas",
             price: 12,
-            description: "Pudim de leite."
+            description:
+                "Pudim de leite.",
+            customizable: false
         }
 
     ];
 
 
-    /* =========================
+    /* =====================================================
        ACRÉSCIMOS
-    ========================= */
+    ===================================================== */
 
     const addons = [
 
@@ -695,14 +839,16 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "quatroqueijos",
             name: "Creme de 4 queijos",
             price: 14,
-            description: "Muçarela, Catupiry, gorgonzola e provolone"
+            description:
+                "Muçarela, Catupiry, gorgonzola e provolone"
         },
 
         {
             id: "carbonada",
             name: "Creme Carbonada",
             price: 14,
-            description: "Bacon, muçarela, Catupiry e creme"
+            description:
+                "Bacon, muçarela, Catupiry e creme"
         },
 
         {
@@ -743,13 +889,28 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
 
-    /* =========================
-       STORAGE
-    ========================= */
+    /* =====================================================
+       CARRINHO
+    ===================================================== */
 
-    let cart = JSON.parse(
-        localStorage.getItem("ranchoCart") || "[]"
-    );
+    let cart = [];
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem("ranchoCart") || "[]"
+            );
+
+        if (!Array.isArray(cart)) {
+            cart = [];
+        }
+
+    } catch (error) {
+
+        cart = [];
+
+    }
 
 
     function saveCart() {
@@ -763,45 +924,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================
-       FORMATAÇÃO
-    ========================= */
+    /* =====================================================
+       DINHEIRO
+    ===================================================== */
 
     function money(value) {
 
-        return value.toLocaleString("pt-BR", {
-            style: "currency",
-            currency: "BRL"
-        });
+        return value.toLocaleString(
+            "pt-BR",
+            {
+                style: "currency",
+                currency: "BRL"
+            }
+        );
 
     }
 
 
-    /* =========================
-       CONTADOR
-    ========================= */
+    /* =====================================================
+       SEGURANÇA PARA TEXTO INSERIDO PELO CLIENTE
+    ===================================================== */
+
+    function escapeHTML(value) {
+
+        return String(value ?? "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =====================================================
+       CONTADOR DO CARRINHO
+    ===================================================== */
 
     function updateCartCount() {
 
-        const count = cart.reduce(
-            (total, item) => total + item.quantity,
-            0
-        );
+        const count =
+            cart.reduce(
+                (total, item) =>
+                    total + Number(item.quantity || 0),
+                0
+            );
+
 
         document
             .querySelectorAll("#cartCount")
             .forEach(element => {
+
                 element.textContent = count;
+
             });
 
     }
 
+
     updateCartCount();
 
 
-    /* =========================
+    /* =====================================================
        CARDÁPIO
-    ========================= */
+    ===================================================== */
 
     const menuContainer =
         document.getElementById("menuContainer");
@@ -814,55 +1000,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderMenu() {
 
-        if (!menuContainer) return;
+        if (!menuContainer) {
+            return;
+        }
+
 
         const search =
             searchInput?.value
-                .toLowerCase()
-                .trim() || "";
+                ?.toLowerCase()
+                ?.trim() || "";
 
 
-        const filtered = products.filter(product => {
+        const filtered =
+            products.filter(product => {
 
-            const categoryMatch =
-                selectedCategory === "todos" ||
-                product.category === selectedCategory;
+                const categoryMatch =
+                    selectedCategory === "todos" ||
+                    product.category === selectedCategory;
 
-            const searchMatch =
-                product.name
-                    .toLowerCase()
-                    .includes(search) ||
 
-                product.description
-                    .toLowerCase()
-                    .includes(search);
+                const searchMatch =
+                    product.name
+                        .toLowerCase()
+                        .includes(search) ||
 
-            return categoryMatch && searchMatch;
+                    product.description
+                        .toLowerCase()
+                        .includes(search);
 
-        });
+
+                return (
+                    categoryMatch &&
+                    searchMatch
+                );
+
+            });
 
 
         const categories = [
+
             {
                 id: "hamburgueres",
                 title: "Hambúrgueres"
             },
+
             {
                 id: "kids",
                 title: "Rancho Kids"
             },
+
             {
                 id: "porcoes",
                 title: "Porções"
             },
+
             {
                 id: "bebidas",
                 title: "Bebidas"
             },
+
             {
                 id: "sobremesas",
                 title: "Sobremesas"
             }
+
         ];
 
 
@@ -874,17 +1075,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const categoryProducts =
                 filtered.filter(
                     product =>
-                        product.category === category.id
+                        product.category ===
+                        category.id
                 );
 
 
-            if (!categoryProducts.length) return;
+            if (!categoryProducts.length) {
+                return;
+            }
 
 
             const section =
                 document.createElement("section");
 
-            section.className = "menu-category";
+            section.className =
+                "menu-category";
 
 
             section.innerHTML = `
@@ -903,7 +1108,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const grid =
-                section.querySelector(".products-grid");
+                section.querySelector(
+                    ".products-grid"
+                );
 
 
             categoryProducts.forEach(product => {
@@ -911,7 +1118,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const card =
                     document.createElement("article");
 
-                card.className = "product-card";
+
+                card.className =
+                    "product-card";
 
 
                 card.innerHTML = `
@@ -938,7 +1147,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <button
                         class="product-add"
-                        data-product="${product.id}">
+                        data-product="${product.id}"
+                        aria-label="Adicionar ${product.name}"
+                    >
                         +
                     </button>
 
@@ -981,30 +1192,44 @@ document.addEventListener("DOMContentLoaded", () => {
     renderMenu();
 
 
-    /* =========================
+    /* =====================================================
        FILTROS
-    ========================= */
+    ===================================================== */
 
     document
         .querySelectorAll(".category-btn")
         .forEach(button => {
 
-            button.addEventListener("click", () => {
+            button.addEventListener(
+                "click",
+                () => {
 
-                document
-                    .querySelectorAll(".category-btn")
-                    .forEach(btn =>
-                        btn.classList.remove("active")
+                    document
+                        .querySelectorAll(
+                            ".category-btn"
+                        )
+                        .forEach(btn => {
+
+                            btn.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    button.classList.add(
+                        "active"
                     );
 
-                button.classList.add("active");
 
-                selectedCategory =
-                    button.dataset.category;
+                    selectedCategory =
+                        button.dataset.category;
 
-                renderMenu();
 
-            });
+                    renderMenu();
+
+                }
+            );
 
         });
 
@@ -1019,30 +1244,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================
+    /* =====================================================
        CUSTOMIZADOR
-    ========================= */
+    ===================================================== */
 
     const customizerModal =
-        document.getElementById("customizerModal");
+        document.getElementById(
+            "customizerModal"
+        );
 
     const customizerTitle =
-        document.getElementById("customizerTitle");
+        document.getElementById(
+            "customizerTitle"
+        );
 
     const customizerDescription =
-        document.getElementById("customizerDescription");
+        document.getElementById(
+            "customizerDescription"
+        );
 
     const customizerPrice =
-        document.getElementById("customizerPrice");
+        document.getElementById(
+            "customizerPrice"
+        );
 
     const addonsContainer =
-        document.getElementById("addonsContainer");
+        document.getElementById(
+            "addonsContainer"
+        );
+
+    const addonsArea =
+        document.getElementById(
+            "addonsArea"
+        );
 
     const addCustomized =
-        document.getElementById("addCustomized");
+        document.getElementById(
+            "addCustomized"
+        );
 
     const closeCustomizer =
-        document.getElementById("closeCustomizer");
+        document.getElementById(
+            "closeCustomizer"
+        );
+
+    const productObservation =
+        document.getElementById(
+            "productObservation"
+        );
 
 
     let selectedProduct = null;
@@ -1056,77 +1305,121 @@ document.addEventListener("DOMContentLoaded", () => {
         customizerTitle.textContent =
             product.name;
 
+
         customizerDescription.textContent =
             product.description;
+
 
         customizerPrice.textContent =
             money(product.price);
 
 
-        addonsContainer.innerHTML = "";
+        if (productObservation) {
+
+            productObservation.value = "";
+
+        }
 
 
-        addons.forEach(addon => {
+        /* =========================
+           ACRÉSCIMOS
+        ========================= */
 
-            const item =
-                document.createElement("label");
+        if (product.customizable) {
 
-            item.className = "addon-item";
+            addonsArea.style.display =
+                "block";
 
 
-            item.innerHTML = `
+            addonsContainer.innerHTML =
+                "";
 
-                <div class="addon-item-left">
 
-                    <input
-                        type="checkbox"
-                        value="${addon.id}"
-                    >
+            addons.forEach(addon => {
 
-                    <div>
+                const item =
+                    document.createElement("label");
 
-                        <strong>
-                            ${addon.name}
-                        </strong>
 
-                        ${
-                            addon.description
-                                ? `<small>${addon.description}</small>`
-                                : ""
-                        }
+                item.className =
+                    "addon-item";
+
+
+                item.innerHTML = `
+
+                    <div class="addon-item-left">
+
+                        <input
+                            type="checkbox"
+                            value="${addon.id}"
+                        >
+
+                        <div>
+
+                            <strong>
+                                ${addon.name}
+                            </strong>
+
+                            ${
+                                addon.description
+                                ?
+                                `<small>
+                                    ${addon.description}
+                                </small>`
+                                :
+                                ""
+                            }
+
+                        </div>
 
                     </div>
 
-                </div>
+                    <span class="addon-price">
+                        + ${money(addon.price)}
+                    </span>
 
-                <span class="addon-price">
-                    + ${money(addon.price)}
-                </span>
-
-            `;
+                `;
 
 
-            const checkbox =
-                item.querySelector("input");
+                const checkbox =
+                    item.querySelector(
+                        "input"
+                    );
 
 
-            checkbox.addEventListener(
-                "change",
-                updateCustomizerPrice
-            );
+                checkbox.addEventListener(
+                    "change",
+                    updateCustomizerPrice
+                );
 
 
-            addonsContainer.appendChild(item);
+                addonsContainer.appendChild(
+                    item
+                );
 
-        });
+            });
+
+        } else {
+
+            addonsArea.style.display =
+                "none";
+
+        }
 
 
-        customizerModal.classList.add("show");
+        customizerModal.classList.add(
+            "show"
+        );
 
     }
 
 
     function updateCustomizerPrice() {
+
+        if (!selectedProduct) {
+            return;
+        }
+
 
         let total =
             selectedProduct.price;
@@ -1141,11 +1434,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 const addon =
                     addons.find(
                         item =>
-                            item.id === input.value
+                            item.id ===
+                            input.value
                     );
 
+
                 if (addon) {
+
                     total += addon.price;
+
                 }
 
             });
@@ -1157,6 +1454,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    /* =====================================================
+       CLICAR NO +
+    ===================================================== */
+
     document.addEventListener(
         "click",
         event => {
@@ -1167,31 +1468,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
 
 
-            if (!button) return;
+            if (!button) {
+                return;
+            }
 
 
             const product =
                 products.find(
                     item =>
                         item.id ===
-                        Number(button.dataset.product)
+                        Number(
+                            button.dataset.product
+                        )
                 );
 
 
             if (product) {
+
                 openCustomizer(product);
+
             }
 
         }
     );
 
 
+    /* =====================================================
+       FECHAR CUSTOMIZADOR
+    ===================================================== */
+
     if (closeCustomizer) {
 
         closeCustomizer.addEventListener(
             "click",
             () => {
-                customizerModal.classList.remove("show");
+
+                customizerModal.classList.remove(
+                    "show"
+                );
+
             }
         );
 
@@ -1205,11 +1520,14 @@ document.addEventListener("DOMContentLoaded", () => {
             event => {
 
                 if (
-                    event.target === customizerModal
+                    event.target ===
+                    customizerModal
                 ) {
+
                     customizerModal.classList.remove(
                         "show"
                     );
+
                 }
 
             }
@@ -1218,9 +1536,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================
+    /* =====================================================
        ADICIONAR AO CARRINHO
-    ========================= */
+    ===================================================== */
 
     if (addCustomized) {
 
@@ -1228,30 +1546,60 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
-                if (!selectedProduct) return;
+                if (!selectedProduct) {
+                    return;
+                }
 
+
+                /* =========================
+                   ACRÉSCIMOS
+                ========================= */
 
                 const selectedAddons = [];
 
 
-                document
-                    .querySelectorAll(
-                        "#addonsContainer input:checked"
-                    )
-                    .forEach(input => {
+                if (
+                    selectedProduct.customizable
+                ) {
 
-                        const addon =
-                            addons.find(
-                                item =>
-                                    item.id ===
-                                    input.value
-                            );
+                    document
+                        .querySelectorAll(
+                            "#addonsContainer input:checked"
+                        )
+                        .forEach(input => {
 
-                        if (addon) {
-                            selectedAddons.push(addon);
-                        }
+                            const addon =
+                                addons.find(
+                                    item =>
+                                        item.id ===
+                                        input.value
+                                );
 
-                    });
+
+                            if (addon) {
+
+                                selectedAddons.push(
+                                    addon
+                                );
+
+                            }
+
+                        });
+
+                }
+
+
+                /* =========================
+                   OBSERVAÇÃO
+                ========================= */
+
+                const observation =
+                    productObservation
+                        ?
+                        productObservation.value
+                            .trim()
+                        :
+                        "";
 
 
                 const addonTotal =
@@ -1262,26 +1610,49 @@ document.addEventListener("DOMContentLoaded", () => {
                     );
 
 
+                const addonIds =
+                    selectedAddons.map(
+                        addon => addon.id
+                    );
+
+
+                /* =========================
+                   VERIFICA ITEM IGUAL
+                ========================= */
+
                 const existing =
                     cart.find(item =>
-                        item.productId === selectedProduct.id &&
-                        JSON.stringify(item.addons) ===
+
+                        item.productId ===
+                        selectedProduct.id &&
+
                         JSON.stringify(
-                            selectedAddons.map(a => a.id)
-                        )
+                            item.addons || []
+                        ) ===
+                        JSON.stringify(
+                            addonIds
+                        ) &&
+
+                        (item.observation || "") ===
+                        observation
+
                     );
 
 
                 if (existing) {
 
-                    existing.quantity++;
+                    existing.quantity =
+                        Number(
+                            existing.quantity || 0
+                        ) + 1;
 
                 } else {
 
                     cart.push({
 
                         id:
-                            Date.now(),
+                            Date.now() +
+                            Math.random(),
 
                         productId:
                             selectedProduct.id,
@@ -1295,14 +1666,24 @@ document.addEventListener("DOMContentLoaded", () => {
                         addons:
                             selectedAddons.map(
                                 addon => ({
-                                    id: addon.id,
-                                    name: addon.name,
-                                    price: addon.price
+
+                                    id:
+                                        addon.id,
+
+                                    name:
+                                        addon.name,
+
+                                    price:
+                                        addon.price
+
                                 })
                             ),
 
                         addonTotal:
                             addonTotal,
+
+                        observation:
+                            observation,
 
                         quantity:
                             1
@@ -1314,11 +1695,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 saveCart();
 
-                updateCartUI();
+
+                /* =========================
+                   FECHA MODAL
+                ========================= */
 
                 customizerModal.classList.remove(
                     "show"
                 );
+
+
+                /* =========================
+                   NÃO ABRE O CARRINHO
+                ========================= */
 
                 showToast(
                     "Adicionado ao carrinho"
@@ -1330,34 +1719,85 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================
+    /* =====================================================
        TOAST
-    ========================= */
+    ===================================================== */
 
     function showToast(message) {
 
         const toast =
-            document.getElementById("toast");
-
-        if (!toast) return;
-
-        toast.textContent = message;
-
-        toast.classList.add("show");
+            document.getElementById(
+                "toast"
+            );
 
 
-        setTimeout(() => {
+        if (!toast) {
+            return;
+        }
 
-            toast.classList.remove("show");
 
-        }, 2200);
+        toast.textContent =
+            message;
+
+
+        toast.classList.add(
+            "show"
+        );
+
+
+        setTimeout(
+            () => {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2200
+        );
 
     }
 
 
-    /* =========================
-       CARRINHO
-    ========================= */
+    /* =====================================================
+       VALOR DO ITEM
+    ===================================================== */
+
+    function getCartItemTotal(item) {
+
+        return (
+            Number(item.price || 0) +
+            Number(item.addonTotal || 0)
+        );
+
+    }
+
+
+    /* =====================================================
+       TOTAL DO CARRINHO
+    ===================================================== */
+
+    function getCartTotal() {
+
+        return cart.reduce(
+            (total, item) => {
+
+                return (
+                    total +
+                    getCartItemTotal(item) *
+                    Number(item.quantity || 0)
+                );
+
+            },
+            0
+        );
+
+    }
+
+
+    /* =====================================================
+       RENDER CARRINHO
+    ===================================================== */
 
     const cartPageContainer =
         document.getElementById(
@@ -1365,35 +1805,14 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    function getCartItemTotal(item) {
-
-        return (
-            item.price +
-            (item.addonTotal || 0)
-        );
-
-    }
-
-
-    function getCartTotal() {
-
-        return cart.reduce(
-            (total, item) =>
-                total +
-                getCartItemTotal(item) *
-                item.quantity,
-            0
-        );
-
-    }
-
-
     function updateCartUI() {
 
         updateCartCount();
 
 
-        if (!cartPageContainer) return;
+        if (!cartPageContainer) {
+            return;
+        }
 
 
         if (!cart.length) {
@@ -1413,10 +1832,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <a
                         href="cardapio.html"
-                        class="btn btn-primary">
-
+                        class="btn btn-primary"
+                    >
                         VER CARDÁPIO
-
                     </a>
 
                 </div>
@@ -1434,60 +1852,110 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 <div class="cart-items">
 
-                    ${cart.map((item, index) => `
+                    ${cart.map(
+                        (item, index) => `
 
                         <article class="cart-item">
 
                             <div>
 
                                 <h3>
-                                    ${item.name}
+                                    ${escapeHTML(
+                                        item.name
+                                    )}
                                 </h3>
 
+
                                 ${
-                                    item.addons?.length
+                                    item.addons &&
+                                    item.addons.length
                                     ?
-                                    `<p>
-                                        Acréscimos:
+                                    `
+                                    <p>
+                                        <strong>
+                                            Acréscimos:
+                                        </strong>
+
                                         ${item.addons
-                                            .map(a => a.name)
-                                            .join(", ")}
-                                    </p>`
+                                            .map(
+                                                addon =>
+                                                    escapeHTML(
+                                                        addon.name
+                                                    )
+                                            )
+                                            .join(", ")
+                                        }
+                                    </p>
+                                    `
                                     :
                                     ""
                                 }
 
-                                <div class="cart-item-price">
+
+                                ${
+                                    item.observation
+                                    ?
+                                    `
+                                    <div
+                                        class="cart-item-observation"
+                                    >
+                                        <strong>
+                                            📝 Observação:
+                                        </strong>
+
+                                        ${escapeHTML(
+                                            item.observation
+                                        )}
+                                    </div>
+                                    `
+                                    :
+                                    ""
+                                }
+
+
+                                <div
+                                    class="cart-item-price"
+                                >
                                     ${money(
-                                        getCartItemTotal(item)
+                                        getCartItemTotal(
+                                            item
+                                        )
                                     )}
                                 </div>
 
 
-                                <div class="cart-controls">
+                                <div
+                                    class="cart-controls"
+                                >
 
                                     <button
                                         class="qty-btn"
                                         data-action="decrease"
-                                        data-index="${index}">
+                                        data-index="${index}"
+                                    >
                                         −
                                     </button>
+
 
                                     <strong>
                                         ${item.quantity}
                                     </strong>
 
+
                                     <button
                                         class="qty-btn"
                                         data-action="increase"
-                                        data-index="${index}">
+                                        data-index="${index}"
+                                    >
                                         +
                                     </button>
+
 
                                     <button
                                         class="remove-btn"
                                         data-action="remove"
-                                        data-index="${index}">
+                                        data-index="${index}"
+                                    >
                                         Remover
                                     </button>
 
@@ -1495,16 +1963,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
                             </div>
 
-                            <strong class="cart-item-price">
+
+                            <strong
+                                class="cart-item-price"
+                            >
                                 ${money(
-                                    getCartItemTotal(item) *
-                                    item.quantity
+                                    getCartItemTotal(
+                                        item
+                                    ) *
+                                    Number(
+                                        item.quantity
+                                    )
                                 )}
                             </strong>
 
                         </article>
 
-                    `).join("")}
+                    `
+                    ).join("")}
 
                 </div>
 
@@ -1515,6 +1991,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         Resumo
                     </h2>
 
+
+                    <div class="summary-line">
+
+                        <span>
+                            Itens
+                        </span>
+
+                        <strong>
+                            ${cart.reduce(
+                                (sum, item) =>
+                                    sum +
+                                    Number(
+                                        item.quantity
+                                    ),
+                                0
+                            )}
+                        </strong>
+
+                    </div>
+
+
                     <div class="summary-line">
 
                         <span>
@@ -1522,10 +2019,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         </span>
 
                         <strong>
-                            ${money(getCartTotal())}
+                            ${money(
+                                getCartTotal()
+                            )}
                         </strong>
 
                     </div>
+
 
                     <div class="summary-line">
 
@@ -1533,19 +2033,32 @@ document.addEventListener("DOMContentLoaded", () => {
                             Total
                         </span>
 
-                        <strong class="summary-total">
-                            ${money(getCartTotal())}
+                        <strong
+                            class="summary-total"
+                        >
+                            ${money(
+                                getCartTotal()
+                            )}
                         </strong>
 
                     </div>
 
+
                     <button
                         class="btn btn-primary full-btn"
-                        id="openCheckout">
-
+                        id="openCheckout"
+                    >
                         FINALIZAR PEDIDO
-
                     </button>
+
+
+                    <a
+                        href="cardapio.html"
+                        class="btn btn-outline full-btn"
+                        style="margin-top:10px;"
+                    >
+                        CONTINUAR COMPRANDO
+                    </a>
 
                 </aside>
 
@@ -1554,8 +2067,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
 
+        /* =====================================================
+           CONTROLES
+        ===================================================== */
+
         document
-            .querySelectorAll("[data-action]")
+            .querySelectorAll(
+                "[data-action]"
+            )
             .forEach(button => {
 
                 button.addEventListener(
@@ -1567,33 +2086,60 @@ document.addEventListener("DOMContentLoaded", () => {
                                 button.dataset.index
                             );
 
+
                         const action =
                             button.dataset.action;
 
 
-                        if (action === "increase") {
+                        if (
+                            !cart[index]
+                        ) {
+                            return;
+                        }
+
+
+                        if (
+                            action ===
+                            "increase"
+                        ) {
 
                             cart[index].quantity++;
 
                         }
 
 
-                        if (action === "decrease") {
+                        if (
+                            action ===
+                            "decrease"
+                        ) {
 
                             cart[index].quantity--;
 
+
                             if (
-                                cart[index].quantity <= 0
+                                cart[index].quantity <=
+                                0
                             ) {
-                                cart.splice(index, 1);
+
+                                cart.splice(
+                                    index,
+                                    1
+                                );
+
                             }
 
                         }
 
 
-                        if (action === "remove") {
+                        if (
+                            action ===
+                            "remove"
+                        ) {
 
-                            cart.splice(index, 1);
+                            cart.splice(
+                                index,
+                                1
+                            );
 
                         }
 
@@ -1608,6 +2154,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
 
+        /* =====================================================
+           CHECKOUT
+        ===================================================== */
+
         const openCheckout =
             document.getElementById(
                 "openCheckout"
@@ -1620,11 +2170,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 "click",
                 () => {
 
-                    document
-                        .getElementById(
+                    const checkoutModal =
+                        document.getElementById(
                             "checkoutModal"
-                        )
-                        .classList.add("show");
+                        );
+
+
+                    if (checkoutModal) {
+
+                        checkoutModal.classList.add(
+                            "show"
+                        );
+
+                    }
 
                 }
             );
@@ -1637,9 +2195,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartUI();
 
 
-    /* =========================
+    /* =====================================================
        CHECKOUT
-    ========================= */
+    ===================================================== */
 
     const closeCheckout =
         document.getElementById(
@@ -1653,17 +2211,58 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
-                document
-                    .getElementById(
+                const checkoutModal =
+                    document.getElementById(
                         "checkoutModal"
-                    )
-                    .classList.remove("show");
+                    );
+
+
+                if (checkoutModal) {
+
+                    checkoutModal.classList.remove(
+                        "show"
+                    );
+
+                }
 
             }
         );
 
     }
 
+
+    const checkoutModal =
+        document.getElementById(
+            "checkoutModal"
+        );
+
+
+    if (checkoutModal) {
+
+        checkoutModal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target ===
+                    checkoutModal
+                ) {
+
+                    checkoutModal.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       ENVIAR WHATSAPP
+    ===================================================== */
 
     const sendWhatsApp =
         document.getElementById(
@@ -1677,22 +2276,32 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
+                const nameInput =
+                    document.getElementById(
+                        "customerName"
+                    );
+
+
+                const observationInput =
+                    document.getElementById(
+                        "customerObservation"
+                    );
+
+
                 const name =
-                    document
-                        .getElementById(
-                            "customerName"
-                        )
-                        .value
-                        .trim();
+                    nameInput
+                        ?
+                        nameInput.value.trim()
+                        :
+                        "";
 
 
-                const observation =
-                    document
-                        .getElementById(
-                            "customerObservation"
-                        )
-                        .value
-                        .trim();
+                const orderObservation =
+                    observationInput
+                        ?
+                        observationInput.value.trim()
+                        :
+                        "";
 
 
                 if (!name) {
@@ -1701,27 +2310,42 @@ document.addEventListener("DOMContentLoaded", () => {
                         "Digite seu nome antes de continuar."
                     );
 
+                    if (nameInput) {
+                        nameInput.focus();
+                    }
+
+                    return;
+
+                }
+
+
+                if (!cart.length) {
+
+                    alert(
+                        "Seu carrinho está vazio."
+                    );
+
                     return;
 
                 }
 
 
                 let message =
-                    `*NOVO PEDIDO - RANCHO CASA DE LANCHES*%0A%0A`;
+                    "*NOVO PEDIDO - RANCHO CASA DE LANCHES*\n\n";
 
 
                 message +=
-                    `*Cliente:* ${name}%0A%0A`;
+                    `*Cliente:* ${name}\n\n`;
 
 
                 message +=
-                    `*PEDIDO:*%0A`;
+                    "*PEDIDO:*\n\n";
 
 
                 cart.forEach(item => {
 
                     message +=
-                        `${item.quantity}x ${item.name}`;
+                        `${item.quantity}x ${item.name}\n`;
 
 
                     if (
@@ -1730,22 +2354,37 @@ document.addEventListener("DOMContentLoaded", () => {
                     ) {
 
                         message +=
-                            `%0A   + ` +
+                            "   + " +
                             item.addons
                                 .map(
                                     addon =>
                                         addon.name
                                 )
-                                .join(", ");
+                                .join(", ") +
+                            "\n";
+
+                    }
+
+
+                    if (
+                        item.observation
+                    ) {
+
+                        message +=
+                            `   📝 Observação: ${item.observation}\n`;
 
                     }
 
 
                     message +=
-                        `%0A   ${money(
-                            getCartItemTotal(item) *
-                            item.quantity
-                        )}%0A%0A`;
+                        `   ${money(
+                            getCartItemTotal(
+                                item
+                            ) *
+                            Number(
+                                item.quantity
+                            )
+                        )}\n\n`;
 
                 });
 
@@ -1753,13 +2392,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 message +=
                     `*TOTAL: ${money(
                         getCartTotal()
-                    )}*%0A`;
+                    )}*\n`;
 
 
-                if (observation) {
+                if (
+                    orderObservation
+                ) {
 
                     message +=
-                        `%0A*Observações:* ${observation}`;
+                        `\n*Observação do pedido:*\n${orderObservation}\n`;
 
                 }
 
@@ -1768,13 +2409,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     "5518981567633";
 
 
-                const url =
-                    `https://wa.me/${phone}?text=${message}`;
+                const whatsappURL =
+                    "https://wa.me/" +
+                    phone +
+                    "?text=" +
+                    encodeURIComponent(
+                        message
+                    );
 
 
                 window.open(
-                    url,
-                    "_blank"
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
                 );
 
             }

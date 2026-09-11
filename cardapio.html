@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Cardápio | Rancho Casa de Lanches</title>
 
@@ -12,7 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
 
@@ -23,12 +31,23 @@
     <div class="container nav">
 
         <a href="index.html" class="logo">
-            <img src="assets/logo.png" alt="Rancho Casa de Lanches">
+
+            <img
+                src="assets/logo.png"
+                alt="Rancho Casa de Lanches"
+            >
+
         </a>
 
-        <button class="menu-toggle" id="menuToggle">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+        >
             ☰
         </button>
+
 
         <nav class="nav-menu" id="navMenu">
 
@@ -36,7 +55,10 @@
                 Início
             </a>
 
-            <a href="cardapio.html" class="active">
+            <a
+                href="cardapio.html"
+                class="active"
+            >
                 Cardápio
             </a>
 
@@ -44,12 +66,18 @@
                 O Rancho
             </a>
 
-            <a href="https://www.instagram.com/agrodronetec_epitacio/"
-               target="_blank">
+            <a
+                href="https://www.instagram.com/agrodronetec_epitacio/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Instagram
             </a>
 
-            <a href="carrinho.html" class="cart-link">
+            <a
+                href="carrinho.html"
+                class="cart-link"
+            >
                 🛒 Carrinho
                 <span id="cartCount">0</span>
             </a>
@@ -63,127 +91,183 @@
 
 <main>
 
-<section class="page-header">
+    <section class="page-header">
 
-    <div class="container">
+        <div class="container">
 
-        <span class="section-kicker">
-            RANCHO CASA DE LANCHES
-        </span>
+            <span class="section-kicker">
+                RANCHO CASA DE LANCHES
+            </span>
 
-        <h1>
-            Nosso <span>Cardápio</span>
-        </h1>
+            <h1>
+                Nosso <span>Cardápio</span>
+            </h1>
 
-        <p>
-            Escolha seu favorito e monte seu pedido.
-        </p>
+            <p>
+                Escolha seu favorito, personalize e faça seu pedido.
+            </p>
 
-    </div>
+        </div>
 
-</section>
+    </section>
 
 
-<section class="menu-section">
+    <section class="menu-section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="menu-toolbar">
+            <div class="menu-toolbar">
 
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="🔎 Procurar no cardápio..."
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="🔎 Procurar no cardápio..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div
+                class="categories"
+                id="categories"
             >
 
+                <button
+                    class="category-btn active"
+                    data-category="todos"
+                >
+                    Todos
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="hamburgueres"
+                >
+                    🍔 Hambúrgueres
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="kids"
+                >
+                    👦 Rancho Kids
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="porcoes"
+                >
+                    🍟 Porções
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="bebidas"
+                >
+                    🥤 Bebidas
+                </button>
+
+                <button
+                    class="category-btn"
+                    data-category="sobremesas"
+                >
+                    🍰 Sobremesas
+                </button>
+
+            </div>
+
+
+            <div id="menuContainer"></div>
+
         </div>
 
-
-        <div class="categories" id="categories">
-
-            <button class="category-btn active"
-                    data-category="todos">
-                Todos
-            </button>
-
-            <button class="category-btn"
-                    data-category="hamburgueres">
-                🍔 Hambúrgueres
-            </button>
-
-            <button class="category-btn"
-                    data-category="kids">
-                👦 Rancho Kids
-            </button>
-
-            <button class="category-btn"
-                    data-category="porcoes">
-                🍟 Porções
-            </button>
-
-            <button class="category-btn"
-                    data-category="bebidas">
-                🥤 Bebidas
-            </button>
-
-            <button class="category-btn"
-                    data-category="sobremesas">
-                🍰 Sobremesas
-            </button>
-
-        </div>
-
-
-        <div id="menuContainer"></div>
-
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
-<!-- MODAL ACRÉSCIMOS -->
+<!-- MODAL DO PRODUTO -->
 
-<div class="modal" id="customizerModal">
+<div
+    class="modal"
+    id="customizerModal"
+>
 
     <div class="modal-box">
 
-        <button class="modal-close" id="closeCustomizer">
+        <button
+            class="modal-close"
+            id="closeCustomizer"
+            aria-label="Fechar"
+        >
             ×
         </button>
+
 
         <span class="section-kicker">
             PERSONALIZE
         </span>
 
+
         <h2 id="customizerTitle">
             Seu pedido
         </h2>
+
 
         <p id="customizerDescription"></p>
 
 
         <div class="customizer-price">
-            <span>Total</span>
+
+            <span>
+                Total
+            </span>
+
             <strong id="customizerPrice">
                 R$ 0,00
             </strong>
+
         </div>
 
 
-        <h3 class="addons-title">
-            Quer acrescentar algo?
-        </h3>
+        <div id="addonsArea">
 
-        <div id="addonsContainer"></div>
+            <h3 class="addons-title">
+                Quer acrescentar algo?
+            </h3>
+
+            <div id="addonsContainer"></div>
+
+        </div>
 
 
-        <button class="btn btn-primary full-btn"
-                id="addCustomized">
+        <!-- OBSERVAÇÃO INDIVIDUAL -->
 
+        <div class="observation-field">
+
+            <label for="productObservation">
+                Observação do lanche
+            </label>
+
+            <textarea
+                id="productObservation"
+                maxlength="250"
+                placeholder="Ex.: sem cebola, sem tomate, molho à parte..."
+            ></textarea>
+
+            <small>
+                Até 250 caracteres
+            </small>
+
+        </div>
+
+
+        <button
+            class="btn btn-primary full-btn"
+            id="addCustomized"
+        >
             ADICIONAR AO CARRINHO
-
         </button>
 
     </div>
@@ -191,7 +275,10 @@
 </div>
 
 
-<div class="toast" id="toast">
+<div
+    class="toast"
+    id="toast"
+>
     Adicionado ao carrinho!
 </div>
 
@@ -211,8 +298,8 @@
         </div>
 
         <div>
-            <p>19h às 23h30</p>
             <p>Quinta a terça</p>
+            <p>19h às 23h30</p>
         </div>
 
     </div>

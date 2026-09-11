@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Carrinho | Rancho Casa de Lanches</title>
 
@@ -12,7 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
 </head>
 
@@ -23,12 +31,23 @@
     <div class="container nav">
 
         <a href="index.html" class="logo">
-            <img src="assets/logo.png" alt="Rancho Casa de Lanches">
+
+            <img
+                src="assets/logo.png"
+                alt="Rancho Casa de Lanches"
+            >
+
         </a>
 
-        <button class="menu-toggle" id="menuToggle">
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menu"
+        >
             ☰
         </button>
+
 
         <nav class="nav-menu" id="navMenu">
 
@@ -44,13 +63,18 @@
                 O Rancho
             </a>
 
-            <a href="https://www.instagram.com/agrodronetec_epitacio/"
-               target="_blank">
+            <a
+                href="https://www.instagram.com/agrodronetec_epitacio/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 Instagram
             </a>
 
-            <a href="carrinho.html"
-               class="cart-link active">
+            <a
+                href="carrinho.html"
+                class="cart-link active"
+            >
                 🛒 Carrinho
                 <span id="cartCount">0</span>
             </a>
@@ -64,42 +88,111 @@
 
 <main>
 
-<section class="page-header">
+    <section class="page-header">
 
-    <div class="container">
+        <div class="container">
 
-        <span class="section-kicker">
-            SEU PEDIDO
-        </span>
+            <span class="section-kicker">
+                SEU PEDIDO
+            </span>
 
-        <h1>
-            Meu <span>Carrinho</span>
-        </h1>
+            <h1>
+                Meu <span>Carrinho</span>
+            </h1>
 
-        <p>
-            Confira seus itens antes de finalizar.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="cart-page">
-
-    <div class="container">
-
-        <div id="cartPageContainer">
-
-            <!-- preenchido pelo JavaScript -->
+            <p>
+                Confira seus itens antes de finalizar.
+            </p>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+    <section class="cart-page">
+
+        <div class="container">
+
+            <div id="cartPageContainer"></div>
+
+        </div>
+
+    </section>
 
 </main>
+
+
+<!-- CHECKOUT -->
+
+<div
+    class="modal"
+    id="checkoutModal"
+>
+
+    <div class="modal-box checkout-box">
+
+        <button
+            class="modal-close"
+            id="closeCheckout"
+            aria-label="Fechar"
+        >
+            ×
+        </button>
+
+
+        <span class="section-kicker">
+            FINALIZAR PEDIDO
+        </span>
+
+
+        <h2>
+            Só falta uma coisa.
+        </h2>
+
+
+        <p>
+            Preencha seus dados para enviar
+            o pedido pelo WhatsApp.
+        </p>
+
+
+        <label>
+
+            Seu nome
+
+            <input
+                type="text"
+                id="customerName"
+                maxlength="80"
+                placeholder="Digite seu nome"
+            >
+
+        </label>
+
+
+        <label>
+
+            Observação do pedido
+
+            <textarea
+                id="customerObservation"
+                maxlength="300"
+                placeholder="Ex.: entregar na portaria, tocar a campainha..."
+            ></textarea>
+
+        </label>
+
+
+        <button
+            class="btn btn-primary full-btn"
+            id="sendWhatsApp"
+        >
+            ENVIAR PELO WHATSAPP
+        </button>
+
+    </div>
+
+</div>
 
 
 <footer class="footer">
@@ -124,59 +217,6 @@
     </div>
 
 </footer>
-
-
-<!-- CHECKOUT -->
-
-<div class="modal" id="checkoutModal">
-
-    <div class="modal-box checkout-box">
-
-        <button class="modal-close"
-                id="closeCheckout">
-            ×
-        </button>
-
-        <span class="section-kicker">
-            FINALIZAR PEDIDO
-        </span>
-
-        <h2>
-            Só falta uma coisa.
-        </h2>
-
-        <p>
-            Preencha seus dados para enviar
-            o pedido pelo WhatsApp.
-        </p>
-
-
-        <label>
-            Seu nome
-            <input type="text"
-                   id="customerName"
-                   placeholder="Digite seu nome">
-        </label>
-
-
-        <label>
-            Observações
-            <textarea
-                id="customerObservation"
-                placeholder="Ex.: sem cebola, ponto da carne..."></textarea>
-        </label>
-
-
-        <button class="btn btn-primary full-btn"
-                id="sendWhatsApp">
-
-            ENVIAR PELO WHATSAPP
-
-        </button>
-
-    </div>
-
-</div>
 
 
 <script src="script.js"></script>
