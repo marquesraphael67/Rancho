@@ -1433,7 +1433,9 @@ saveCustomizerButton.addEventListener(
 
         closeCustomizer();
 
-        openCart();
+        showToast(
+    "Adicionado ao carrinho"
+);
 
     }
 );
