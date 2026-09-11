@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+
     /* =====================================================
        MENU MOBILE
     ===================================================== */
@@ -28,9 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const products = [
 
-        /* =========================
-           HAMBÚRGUERES
-        ========================= */
+        /* HAMBÚRGUERES */
 
         {
             id: 1,
@@ -275,9 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
 
-        /* =========================
-           RANCHO KIDS
-        ========================= */
+        /* KIDS */
 
         {
             id: 30,
@@ -357,9 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
 
-        /* =========================
-           PORÇÕES
-        ========================= */
+        /* PORÇÕES */
 
         {
             id: 40,
@@ -549,9 +544,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
 
-        /* =========================
-           BEBIDAS
-        ========================= */
+        /* BEBIDAS */
 
         {
             id: 60,
@@ -675,9 +668,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
 
 
-        /* =========================
-           SOBREMESAS
-        ========================= */
+        /* SOBREMESAS */
 
         {
             id: 80,
@@ -895,6 +886,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = [];
 
+
     try {
 
         cart =
@@ -902,11 +894,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 localStorage.getItem("ranchoCart") || "[]"
             );
 
+
         if (!Array.isArray(cart)) {
+
             cart = [];
+
         }
 
-    } catch (error) {
+    } catch {
 
         cart = [];
 
@@ -921,6 +916,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         updateCartCount();
+
     }
 
 
@@ -930,7 +926,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function money(value) {
 
-        return value.toLocaleString(
+        return Number(value).toLocaleString(
             "pt-BR",
             {
                 style: "currency",
@@ -942,7 +938,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       SEGURANÇA PARA TEXTO INSERIDO PELO CLIENTE
+       SEGURANÇA
     ===================================================== */
 
     function escapeHTML(value) {
@@ -958,7 +954,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CONTADOR DO CARRINHO
+       CONTADOR
     ===================================================== */
 
     function updateCartCount() {
@@ -966,7 +962,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const count =
             cart.reduce(
                 (total, item) =>
-                    total + Number(item.quantity || 0),
+                    total +
+                    Number(item.quantity || 0),
                 0
             );
 
@@ -975,7 +972,8 @@ document.addEventListener("DOMContentLoaded", () => {
             .querySelectorAll("#cartCount")
             .forEach(element => {
 
-                element.textContent = count;
+                element.textContent =
+                    count;
 
             });
 
@@ -990,12 +988,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const menuContainer =
-        document.getElementById("menuContainer");
+        document.getElementById(
+            "menuContainer"
+        );
+
 
     const searchInput =
-        document.getElementById("searchInput");
+        document.getElementById(
+            "searchInput"
+        );
 
-    let selectedCategory = "todos";
+
+    let selectedCategory =
+        "todos";
 
 
     function renderMenu() {
@@ -1016,7 +1021,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const categoryMatch =
                     selectedCategory === "todos" ||
-                    product.category === selectedCategory;
+                    product.category ===
+                    selectedCategory;
 
 
                 const searchMatch =
@@ -1086,7 +1092,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const section =
-                document.createElement("section");
+                document.createElement(
+                    "section"
+                );
+
 
             section.className =
                 "menu-category";
@@ -1116,7 +1125,9 @@ document.addEventListener("DOMContentLoaded", () => {
             categoryProducts.forEach(product => {
 
                 const card =
-                    document.createElement("article");
+                    document.createElement(
+                        "article"
+                    );
 
 
                 card.className =
@@ -1132,11 +1143,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
 
                         <div class="product-name">
-                            ${product.name}
+                            ${escapeHTML(product.name)}
                         </div>
 
                         <div class="product-description">
-                            ${product.description}
+                            ${escapeHTML(product.description)}
                         </div>
 
                         <div class="product-price">
@@ -1145,10 +1156,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     </div>
 
+
                     <button
                         class="product-add"
                         data-product="${product.id}"
-                        aria-label="Adicionar ${product.name}"
+                        aria-label="Adicionar ${escapeHTML(product.name)}"
                     >
                         +
                     </button>
@@ -1193,7 +1205,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FILTROS
+       CATEGORIAS
     ===================================================== */
 
     document
@@ -1253,40 +1265,48 @@ document.addEventListener("DOMContentLoaded", () => {
             "customizerModal"
         );
 
+
     const customizerTitle =
         document.getElementById(
             "customizerTitle"
         );
+
 
     const customizerDescription =
         document.getElementById(
             "customizerDescription"
         );
 
+
     const customizerPrice =
         document.getElementById(
             "customizerPrice"
         );
+
 
     const addonsContainer =
         document.getElementById(
             "addonsContainer"
         );
 
+
     const addonsArea =
         document.getElementById(
             "addonsArea"
         );
+
 
     const addCustomized =
         document.getElementById(
             "addCustomized"
         );
 
+
     const closeCustomizer =
         document.getElementById(
             "closeCustomizer"
         );
+
 
     const productObservation =
         document.getElementById(
@@ -1299,7 +1319,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openCustomizer(product) {
 
-        selectedProduct = product;
+        selectedProduct =
+            product;
 
 
         customizerTitle.textContent =
@@ -1316,14 +1337,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (productObservation) {
 
-            productObservation.value = "";
+            productObservation.value =
+                "";
 
         }
 
-
-        /* =========================
-           ACRÉSCIMOS
-        ========================= */
 
         if (product.customizable) {
 
@@ -1338,7 +1356,9 @@ document.addEventListener("DOMContentLoaded", () => {
             addons.forEach(addon => {
 
                 const item =
-                    document.createElement("label");
+                    document.createElement(
+                        "label"
+                    );
 
 
                 item.className =
@@ -1357,14 +1377,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         <div>
 
                             <strong>
-                                ${addon.name}
+                                ${escapeHTML(addon.name)}
                             </strong>
 
                             ${
                                 addon.description
                                 ?
                                 `<small>
-                                    ${addon.description}
+                                    ${escapeHTML(addon.description)}
                                 </small>`
                                 :
                                 ""
@@ -1441,7 +1461,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (addon) {
 
-                    total += addon.price;
+                    total +=
+                        addon.price;
 
                 }
 
@@ -1455,7 +1476,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CLICAR NO +
+       ABRIR PRODUTO
     ===================================================== */
 
     document.addEventListener(
@@ -1485,7 +1506,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (product) {
 
-                openCustomizer(product);
+                openCustomizer(
+                    product
+                );
 
             }
 
@@ -1494,7 +1517,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       FECHAR CUSTOMIZADOR
+       FECHAR PRODUTO
     ===================================================== */
 
     if (closeCustomizer) {
@@ -1551,11 +1574,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                /* =========================
-                   ACRÉSCIMOS
-                ========================= */
-
-                const selectedAddons = [];
+                const selectedAddons =
+                    [];
 
 
                 if (
@@ -1589,15 +1609,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-                /* =========================
-                   OBSERVAÇÃO
-                ========================= */
+                /* OBSERVAÇÃO */
 
                 const observation =
                     productObservation
                         ?
-                        productObservation.value
-                            .trim()
+                        productObservation.value.trim()
                         :
                         "";
 
@@ -1612,13 +1629,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const addonIds =
                     selectedAddons.map(
-                        addon => addon.id
+                        addon =>
+                            addon.id
                     );
 
 
-                /* =========================
-                   VERIFICA ITEM IGUAL
-                ========================= */
+                /* ITEM IGUAL */
 
                 const existing =
                     cart.find(item =>
@@ -1633,7 +1649,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             addonIds
                         ) &&
 
-                        (item.observation || "") ===
+                        (
+                            item.observation ||
+                            ""
+                        ) ===
                         observation
 
                     );
@@ -1696,18 +1715,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 saveCart();
 
 
-                /* =========================
-                   FECHA MODAL
-                ========================= */
+                /* NÃO ABRE O CARRINHO */
 
                 customizerModal.classList.remove(
                     "show"
                 );
 
-
-                /* =========================
-                   NÃO ABRE O CARRINHO
-                ========================= */
 
                 showToast(
                     "Adicionado ao carrinho"
@@ -1760,7 +1773,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       VALOR DO ITEM
+       TOTAL DO ITEM
     ===================================================== */
 
     function getCartItemTotal(item) {
@@ -1784,8 +1797,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 return (
                     total +
-                    getCartItemTotal(item) *
-                    Number(item.quantity || 0)
+
+                    getCartItemTotal(
+                        item
+                    ) *
+
+                    Number(
+                        item.quantity || 0
+                    )
                 );
 
             },
@@ -1860,9 +1879,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div>
 
                                 <h3>
-                                    ${escapeHTML(
-                                        item.name
-                                    )}
+                                    ${escapeHTML(item.name)}
                                 </h3>
 
 
@@ -1872,6 +1889,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     ?
                                     `
                                     <p>
+
                                         <strong>
                                             Acréscimos:
                                         </strong>
@@ -1883,8 +1901,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                                         addon.name
                                                     )
                                             )
-                                            .join(", ")
-                                        }
+                                            .join(", ")}
+
                                     </p>
                                     `
                                     :
@@ -1899,6 +1917,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                     <div
                                         class="cart-item-observation"
                                     >
+
                                         <strong>
                                             📝 Observação:
                                         </strong>
@@ -1906,6 +1925,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                         ${escapeHTML(
                                             item.observation
                                         )}
+
                                     </div>
                                     `
                                     :
@@ -1913,20 +1933,18 @@ document.addEventListener("DOMContentLoaded", () => {
                                 }
 
 
-                                <div
-                                    class="cart-item-price"
-                                >
+                                <div class="cart-item-price">
+
                                     ${money(
                                         getCartItemTotal(
                                             item
                                         )
                                     )}
+
                                 </div>
 
 
-                                <div
-                                    class="cart-controls"
-                                >
+                                <div class="cart-controls">
 
                                     <button
                                         class="qty-btn"
@@ -1964,9 +1982,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
 
 
-                            <strong
-                                class="cart-item-price"
-                            >
+                            <strong class="cart-item-price">
+
                                 ${money(
                                     getCartItemTotal(
                                         item
@@ -1975,6 +1992,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                         item.quantity
                                     )
                                 )}
+
                             </strong>
 
                         </article>
@@ -2033,9 +2051,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             Total
                         </span>
 
-                        <strong
-                            class="summary-total"
-                        >
+                        <strong class="summary-total">
                             ${money(
                                 getCartTotal()
                             )}
@@ -2067,9 +2083,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
 
 
-        /* =====================================================
-           CONTROLES
-        ===================================================== */
+        /* CONTROLES */
 
         document
             .querySelectorAll(
@@ -2091,9 +2105,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             button.dataset.action;
 
 
-                        if (
-                            !cart[index]
-                        ) {
+                        if (!cart[index]) {
                             return;
                         }
 
@@ -2154,9 +2166,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
 
-        /* =====================================================
-           CHECKOUT
-        ===================================================== */
+        /* CHECKOUT */
 
         const openCheckout =
             document.getElementById(
@@ -2205,36 +2215,26 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    const checkoutModal =
+        document.getElementById(
+            "checkoutModal"
+        );
+
+
     if (closeCheckout) {
 
         closeCheckout.addEventListener(
             "click",
             () => {
 
-                const checkoutModal =
-                    document.getElementById(
-                        "checkoutModal"
-                    );
-
-
-                if (checkoutModal) {
-
-                    checkoutModal.classList.remove(
-                        "show"
-                    );
-
-                }
+                checkoutModal.classList.remove(
+                    "show"
+                );
 
             }
         );
 
     }
-
-
-    const checkoutModal =
-        document.getElementById(
-            "checkoutModal"
-        );
 
 
     if (checkoutModal) {
@@ -2261,7 +2261,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       ENVIAR WHATSAPP
+       ENTREGA / RETIRADA
+    ===================================================== */
+
+    const deliveryFields =
+        document.getElementById(
+            "deliveryFields"
+        );
+
+
+    const deliveryRadios =
+        document.querySelectorAll(
+            'input[name="deliveryType"]'
+        );
+
+
+    function updateDeliveryFields() {
+
+        const selected =
+            document.querySelector(
+                'input[name="deliveryType"]:checked'
+            );
+
+
+        if (!selected) {
+            return;
+        }
+
+
+        if (
+            selected.value ===
+            "entrega"
+        ) {
+
+            deliveryFields.classList.remove(
+                "hidden"
+            );
+
+        } else {
+
+            deliveryFields.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+
+
+    deliveryRadios.forEach(radio => {
+
+        radio.addEventListener(
+            "change",
+            updateDeliveryFields
+        );
+
+    });
+
+
+    updateDeliveryFields();
+
+
+    /* =====================================================
+       WHATSAPP
     ===================================================== */
 
     const sendWhatsApp =
@@ -2276,32 +2338,15 @@ document.addEventListener("DOMContentLoaded", () => {
             "click",
             () => {
 
-                const nameInput =
-                    document.getElementById(
-                        "customerName"
-                    );
-
-
-                const observationInput =
-                    document.getElementById(
-                        "customerObservation"
-                    );
-
+                /* NOME */
 
                 const name =
-                    nameInput
-                        ?
-                        nameInput.value.trim()
-                        :
-                        "";
-
-
-                const orderObservation =
-                    observationInput
-                        ?
-                        observationInput.value.trim()
-                        :
-                        "";
+                    document
+                        .getElementById(
+                            "customerName"
+                        )
+                        ?.value
+                        .trim() || "";
 
 
                 if (!name) {
@@ -2310,9 +2355,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         "Digite seu nome antes de continuar."
                     );
 
-                    if (nameInput) {
-                        nameInput.focus();
-                    }
+                    document
+                        .getElementById(
+                            "customerName"
+                        )
+                        ?.focus();
 
                     return;
 
@@ -2330,6 +2377,95 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
+                /* FORMA DE RECEBIMENTO */
+
+                const deliveryType =
+                    document.querySelector(
+                        'input[name="deliveryType"]:checked'
+                    )?.value || "retirada";
+
+
+                /* ENDEREÇO */
+
+                let street = "";
+                let number = "";
+                let neighborhood = "";
+                let complement = "";
+
+
+                if (
+                    deliveryType ===
+                    "entrega"
+                ) {
+
+                    street =
+                        document
+                            .getElementById(
+                                "customerStreet"
+                            )
+                            ?.value
+                            .trim() || "";
+
+
+                    number =
+                        document
+                            .getElementById(
+                                "customerNumber"
+                            )
+                            ?.value
+                            .trim() || "";
+
+
+                    neighborhood =
+                        document
+                            .getElementById(
+                                "customerNeighborhood"
+                            )
+                            ?.value
+                            .trim() || "";
+
+
+                    complement =
+                        document
+                            .getElementById(
+                                "customerComplement"
+                            )
+                            ?.value
+                            .trim() || "";
+
+
+                    if (
+                        !street ||
+                        !number ||
+                        !neighborhood
+                    ) {
+
+                        alert(
+                            "Preencha rua, número e bairro para a entrega."
+                        );
+
+                        return;
+
+                    }
+
+                }
+
+
+                /* OBSERVAÇÃO */
+
+                const orderObservation =
+                    document
+                        .getElementById(
+                            "customerObservation"
+                        )
+                        ?.value
+                        .trim() || "";
+
+
+                /* =================================================
+                   MONTAR MENSAGEM
+                ================================================= */
+
                 let message =
                     "*NOVO PEDIDO - RANCHO CASA DE LANCHES*\n\n";
 
@@ -2337,6 +2473,54 @@ document.addEventListener("DOMContentLoaded", () => {
                 message +=
                     `*Cliente:* ${name}\n\n`;
 
+
+                /* RECEBIMENTO */
+
+                if (
+                    deliveryType ===
+                    "entrega"
+                ) {
+
+                    message +=
+                        "*Forma de recebimento:* ENTREGA\n\n";
+
+
+                    message +=
+                        "*Endereço de entrega:*\n";
+
+
+                    message +=
+                        `${street}, ${number}\n`;
+
+
+                    message +=
+                        `${neighborhood}\n`;
+
+
+                    if (complement) {
+
+                        message +=
+                            `Complemento: ${complement}\n`;
+
+                    }
+
+
+                    message +=
+                        "\n";
+
+                } else {
+
+                    message +=
+                        "*Forma de recebimento:* RETIRAR NO LOCAL\n";
+
+
+                    message +=
+                        "📍 Rua Macieió, 53 - Presidente Epitácio - SP\n\n";
+
+                }
+
+
+                /* PEDIDO */
 
                 message +=
                     "*PEDIDO:*\n\n";
@@ -2355,12 +2539,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         message +=
                             "   + " +
+
                             item.addons
                                 .map(
                                     addon =>
                                         addon.name
                                 )
                                 .join(", ") +
+
                             "\n";
 
                     }
@@ -2389,21 +2575,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
 
 
+                /* TOTAL */
+
                 message +=
                     `*TOTAL: ${money(
                         getCartTotal()
                     )}*\n`;
 
 
+                /* OBSERVAÇÃO GERAL */
+
                 if (
                     orderObservation
                 ) {
 
                     message +=
-                        `\n*Observação do pedido:*\n${orderObservation}\n`;
+                        "\n*Observação do pedido:*\n";
+
+
+                    message +=
+                        orderObservation +
+                        "\n";
 
                 }
 
+
+                /* =================================================
+                   WHATSAPP
+                ================================================= */
 
                 const phone =
                     "5518981567633";
@@ -2420,8 +2619,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 window.open(
                     whatsappURL,
-                    "_blank",
-                    "noopener,noreferrer"
+                    "_blank"
                 );
 
             }

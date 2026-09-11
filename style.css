@@ -1,4 +1,5 @@
 :root {
+
     --black: #080808;
     --black-2: #111111;
     --black-3: #181818;
@@ -15,9 +16,9 @@
 }
 
 
-/* =========================
-RESET
-========================= */
+/* ==========================================
+   RESET
+========================================== */
 
 * {
     margin: 0;
@@ -25,12 +26,16 @@ RESET
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     background: var(--black);
+
     color: var(--white);
 
     font-family: "Inter", sans-serif;
@@ -42,10 +47,12 @@ body {
     overflow-x: hidden;
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 
 button,
 input,
@@ -53,39 +60,49 @@ textarea {
     font: inherit;
 }
 
+
 button {
     cursor: pointer;
 }
 
+
 .container {
-    width: min(
-        var(--container),
-        calc(100% - 40px)
-    );
+
+    width:
+        min(
+            var(--container),
+            calc(100% - 40px)
+        );
 
     margin: auto;
 }
 
 
-/* =========================
-HEADER
-========================= */
+/* ==========================================
+   HEADER
+========================================== */
 
 .header {
+
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
 
-    background: rgba(8,8,8,.94);
+    background:
+        rgba(8,8,8,.94);
 
-    backdrop-filter: blur(15px);
+    backdrop-filter:
+        blur(15px);
 
     border-bottom:
         1px solid var(--border);
 }
 
+
 .nav {
+
     min-height: 86px;
 
     display: flex;
@@ -95,7 +112,9 @@ HEADER
     justify-content: space-between;
 }
 
+
 .logo img {
+
     width: 125px;
 
     max-height: 68px;
@@ -103,7 +122,9 @@ HEADER
     object-fit: contain;
 }
 
+
 .nav-menu {
+
     display: flex;
 
     align-items: center;
@@ -111,7 +132,9 @@ HEADER
     gap: 32px;
 }
 
+
 .nav-menu a {
+
     position: relative;
 
     color: #ddd;
@@ -125,12 +148,16 @@ HEADER
     transition: .25s ease;
 }
 
+
 .nav-menu a:hover,
 .nav-menu a.active {
+
     color: var(--orange);
 }
 
+
 .nav-menu a.active::after {
+
     content: "";
 
     position: absolute;
@@ -146,7 +173,9 @@ HEADER
     background: var(--orange);
 }
 
+
 .cart-link {
+
     display: flex;
 
     align-items: center;
@@ -154,7 +183,9 @@ HEADER
     gap: 7px;
 }
 
+
 .cart-link span {
+
     min-width: 21px;
 
     height: 21px;
@@ -176,7 +207,9 @@ HEADER
     font-weight: 800;
 }
 
+
 .menu-toggle {
+
     display: none;
 
     border: 0;
@@ -189,11 +222,12 @@ HEADER
 }
 
 
-/* =========================
-HERO
-========================= */
+/* ==========================================
+   HERO
+========================================== */
 
 .hero {
+
     min-height: 700px;
 
     display: flex;
@@ -203,6 +237,7 @@ HERO
     position: relative;
 
     background:
+
         radial-gradient(
             circle at 80% 50%,
             rgba(255,106,0,.20),
@@ -217,7 +252,9 @@ HERO
         );
 }
 
+
 .hero-content {
+
     position: relative;
 
     z-index: 2;
@@ -225,8 +262,10 @@ HERO
     padding: 100px 0;
 }
 
+
 .eyebrow,
 .section-kicker {
+
     display: block;
 
     color: var(--orange);
@@ -242,7 +281,9 @@ HERO
     margin-bottom: 18px;
 }
 
+
 .hero h1 {
+
     max-width: 900px;
 
     font-family: "Bebas Neue", sans-serif;
@@ -255,13 +296,17 @@ HERO
     text-transform: uppercase;
 }
 
+
 .hero h1 span,
 h1 span,
 h2 span {
+
     color: var(--orange);
 }
 
+
 .hero p {
+
     max-width: 620px;
 
     margin-top: 30px;
@@ -271,7 +316,9 @@ h2 span {
     font-size: 20px;
 }
 
+
 .hero-buttons {
+
     display: flex;
 
     gap: 15px;
@@ -280,11 +327,12 @@ h2 span {
 }
 
 
-/* =========================
-BOTÕES
-========================= */
+/* ==========================================
+   BOTÕES
+========================================== */
 
 .btn {
+
     min-height: 54px;
 
     display: inline-flex;
@@ -306,56 +354,70 @@ BOTÕES
     transition: .25s ease;
 }
 
+
 .btn-primary {
+
     background: var(--orange);
 
     color: #080808;
 }
 
+
 .btn-primary:hover {
+
     background: var(--orange-light);
 
     transform: translateY(-2px);
 }
 
+
 .btn-outline {
-    border: 1px solid rgba(255,255,255,.3);
+
+    border:
+        1px solid rgba(255,255,255,.3);
 
     color: white;
 }
 
+
 .btn-outline:hover {
+
     border-color: var(--orange);
 
     color: var(--orange);
 }
+
 
 .full-btn {
     width: 100%;
 }
 
 
-/* =========================
-SEÇÕES
-========================= */
+/* ==========================================
+   SEÇÕES
+========================================== */
 
 .section {
     padding: 120px 0;
 }
 
+
 .section-heading {
     margin-bottom: 55px;
 }
 
+
 .section-heading.center {
     text-align: center;
 }
+
 
 .section-heading h2,
 .split-content h2,
 .about-text h2,
 .cta-section h2,
 .location-card h2 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size:
@@ -366,7 +428,9 @@ SEÇÕES
     text-transform: uppercase;
 }
 
+
 .section-heading p {
+
     max-width: 600px;
 
     margin-top: 20px;
@@ -377,11 +441,12 @@ SEÇÕES
 }
 
 
-/* =========================
-DESTAQUES
-========================= */
+/* ==========================================
+   DESTAQUES
+========================================== */
 
 .featured-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -390,7 +455,9 @@ DESTAQUES
     gap: 20px;
 }
 
+
 .featured-card {
+
     position: relative;
 
     min-height: 350px;
@@ -405,14 +472,18 @@ DESTAQUES
     transition: .3s ease;
 }
 
+
 .featured-card:hover {
+
     transform: translateY(-8px);
 
     border-color:
         rgba(255,106,0,.5);
 }
 
+
 .featured-highlight {
+
     background:
         linear-gradient(
             145deg,
@@ -421,7 +492,9 @@ DESTAQUES
         );
 }
 
+
 .featured-number {
+
     margin-bottom: 55px;
 
     color: var(--orange);
@@ -433,7 +506,9 @@ DESTAQUES
     letter-spacing: 2px;
 }
 
+
 .featured-card h3 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size: 36px;
@@ -441,14 +516,18 @@ DESTAQUES
     text-transform: uppercase;
 }
 
+
 .featured-card p {
+
     margin:
         12px 0 25px;
 
     color: var(--gray);
 }
 
+
 .featured-card strong {
+
     display: block;
 
     color: var(--orange);
@@ -456,7 +535,9 @@ DESTAQUES
     font-size: 22px;
 }
 
+
 .text-link {
+
     display: inline-block;
 
     margin-top: 25px;
@@ -471,11 +552,12 @@ DESTAQUES
 }
 
 
-/* =========================
-SPLIT
-========================= */
+/* ==========================================
+   SPLIT
+========================================== */
 
 .split-section {
+
     display: grid;
 
     grid-template-columns:
@@ -484,7 +566,9 @@ SPLIT
     background: var(--black-2);
 }
 
+
 .split-content {
+
     padding:
         100px
         max(40px, calc((100vw - 1180px) / 2));
@@ -492,7 +576,9 @@ SPLIT
     padding-right: 80px;
 }
 
+
 .split-content p {
+
     max-width: 600px;
 
     margin:
@@ -501,7 +587,9 @@ SPLIT
     color: var(--gray);
 }
 
+
 .split-image {
+
     min-height: 600px;
 
     display: flex;
@@ -511,6 +599,7 @@ SPLIT
     justify-content: center;
 
     background:
+
         radial-gradient(
             circle,
             rgba(255,106,0,.3),
@@ -520,8 +609,11 @@ SPLIT
         #101010;
 }
 
+
 .image-placeholder {
+
     width: 70%;
+
     height: 70%;
 
     display: flex;
@@ -534,7 +626,9 @@ SPLIT
         1px solid rgba(255,106,0,.35);
 }
 
+
 .image-placeholder span {
+
     color: var(--orange);
 
     font-family: "Bebas Neue", sans-serif;
@@ -543,11 +637,12 @@ SPLIT
 }
 
 
-/* =========================
-INFORMAÇÕES
-========================= */
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
 
 .info-section {
+
     padding: 80px 0;
 
     border-top:
@@ -557,7 +652,9 @@ INFORMAÇÕES
         1px solid var(--border);
 }
 
+
 .info-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -566,7 +663,9 @@ INFORMAÇÕES
     gap: 20px;
 }
 
+
 .info-box {
+
     padding: 35px;
 
     background: var(--black-2);
@@ -575,28 +674,36 @@ INFORMAÇÕES
         1px solid var(--border);
 }
 
+
 .info-icon {
     font-size: 30px;
 }
 
+
 .info-box h3 {
+
     margin:
         18px 0 8px;
 
     font-size: 20px;
 }
 
+
 .info-box p {
     color: var(--gray);
 }
 
+
 .info-box strong {
+
     display: block;
 
     color: var(--orange);
 }
 
+
 .info-box small {
+
     display: block;
 
     margin-top: 8px;
@@ -604,7 +711,9 @@ INFORMAÇÕES
     color: #777;
 }
 
+
 .info-link {
+
     display: inline-block;
 
     margin-top: 15px;
@@ -615,16 +724,18 @@ INFORMAÇÕES
 }
 
 
-/* =========================
-CTA
-========================= */
+/* ==========================================
+   CTA
+========================================== */
 
 .cta-section {
+
     padding: 130px 0;
 
     text-align: center;
 
     background:
+
         radial-gradient(
             circle at center,
             rgba(255,106,0,.14),
@@ -632,21 +743,24 @@ CTA
         );
 }
 
+
 .cta-section .btn {
     margin-top: 35px;
 }
 
 
-/* =========================
-PAGE HEADER
-========================= */
+/* ==========================================
+   PAGE HEADER
+========================================== */
 
 .page-header {
+
     padding:
         110px 0
         80px;
 
     background:
+
         radial-gradient(
             circle at 80% 50%,
             rgba(255,106,0,.13),
@@ -657,7 +771,9 @@ PAGE HEADER
         1px solid var(--border);
 }
 
+
 .page-header h1 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size:
@@ -668,7 +784,9 @@ PAGE HEADER
     text-transform: uppercase;
 }
 
+
 .page-header p {
+
     margin-top: 20px;
 
     color: var(--gray);
@@ -677,21 +795,25 @@ PAGE HEADER
 }
 
 
-/* =========================
-CARDÁPIO
-========================= */
+/* ==========================================
+   CARDÁPIO
+========================================== */
 
 .menu-section {
+
     padding:
         70px 0
         120px;
 }
 
+
 .menu-toolbar {
     margin-bottom: 30px;
 }
 
+
 #searchInput {
+
     width: 100%;
 
     height: 60px;
@@ -713,11 +835,14 @@ CARDÁPIO
     font-size: 17px;
 }
 
+
 #searchInput:focus {
     border-color: var(--orange);
 }
 
+
 .categories {
+
     display: flex;
 
     gap: 10px;
@@ -727,11 +852,11 @@ CARDÁPIO
     padding-bottom: 10px;
 
     margin-bottom: 70px;
-
-    scrollbar-width: thin;
 }
 
+
 .category-btn {
+
     flex-shrink: 0;
 
     padding:
@@ -753,8 +878,10 @@ CARDÁPIO
     transition: .25s ease;
 }
 
+
 .category-btn:hover,
 .category-btn.active {
+
     background: var(--orange);
 
     border-color: var(--orange);
@@ -762,11 +889,14 @@ CARDÁPIO
     color: #000;
 }
 
+
 .menu-category {
     margin-bottom: 80px;
 }
 
+
 .menu-category-title {
+
     display: flex;
 
     align-items: center;
@@ -776,7 +906,9 @@ CARDÁPIO
     margin-bottom: 30px;
 }
 
+
 .menu-category-title h2 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size: 50px;
@@ -784,7 +916,9 @@ CARDÁPIO
     text-transform: uppercase;
 }
 
+
 .menu-category-title::after {
+
     content: "";
 
     flex: 1;
@@ -794,7 +928,9 @@ CARDÁPIO
     background: var(--border);
 }
 
+
 .products-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -803,7 +939,9 @@ CARDÁPIO
     gap: 15px;
 }
 
+
 .product-card {
+
     display: flex;
 
     justify-content: space-between;
@@ -820,16 +958,21 @@ CARDÁPIO
     transition: .25s ease;
 }
 
+
 .product-card:hover {
+
     border-color:
         rgba(255,106,0,.45);
 }
+
 
 .product-info {
     flex: 1;
 }
 
+
 .product-category {
+
     color: var(--orange);
 
     font-size: 11px;
@@ -841,7 +984,9 @@ CARDÁPIO
     text-transform: uppercase;
 }
 
+
 .product-name {
+
     margin-top: 4px;
 
     font-size: 21px;
@@ -849,7 +994,9 @@ CARDÁPIO
     font-weight: 800;
 }
 
+
 .product-description {
+
     margin-top: 7px;
 
     color: #8e8e8e;
@@ -857,7 +1004,9 @@ CARDÁPIO
     font-size: 14px;
 }
 
+
 .product-price {
+
     margin-top: 15px;
 
     color: var(--orange);
@@ -867,10 +1016,13 @@ CARDÁPIO
     font-weight: 800;
 }
 
+
 .product-add {
+
     align-self: center;
 
     width: 45px;
+
     height: 45px;
 
     border: 0;
@@ -888,16 +1040,18 @@ CARDÁPIO
     transition: .2s;
 }
 
+
 .product-add:hover {
     transform: scale(1.08);
 }
 
 
-/* =========================
-MODAL
-========================= */
+/* ==========================================
+   MODAL
+========================================== */
 
 .modal {
+
     position: fixed;
 
     inset: 0;
@@ -918,11 +1072,14 @@ MODAL
     backdrop-filter: blur(8px);
 }
 
+
 .modal.show {
     display: flex;
 }
 
+
 .modal-box {
+
     position: relative;
 
     width:
@@ -942,10 +1099,13 @@ MODAL
     border-radius: 8px;
 }
 
+
 .modal-close {
+
     position: absolute;
 
     top: 15px;
+
     right: 18px;
 
     border: 0;
@@ -957,7 +1117,9 @@ MODAL
     font-size: 32px;
 }
 
+
 .modal-box h2 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size: 50px;
@@ -967,14 +1129,18 @@ MODAL
     text-transform: uppercase;
 }
 
+
 .modal-box > p {
+
     margin:
         12px 0 25px;
 
     color: var(--gray);
 }
 
+
 .customizer-price {
+
     display: flex;
 
     justify-content: space-between;
@@ -990,15 +1156,19 @@ MODAL
         1px solid var(--border);
 }
 
+
 .customizer-price strong {
     color: var(--orange);
 }
+
 
 .addons-title {
     margin-bottom: 15px;
 }
 
+
 .addon-item {
+
     display: flex;
 
     align-items: center;
@@ -1019,7 +1189,9 @@ MODAL
     cursor: pointer;
 }
 
+
 .addon-item-left {
+
     display: flex;
 
     align-items: center;
@@ -1027,11 +1199,14 @@ MODAL
     gap: 12px;
 }
 
+
 .addon-item input {
     accent-color: var(--orange);
 }
 
+
 .addon-item small {
+
     display: block;
 
     margin-top: 2px;
@@ -1041,7 +1216,9 @@ MODAL
     font-size: 11px;
 }
 
+
 .addon-price {
+
     color: var(--orange);
 
     font-weight: 800;
@@ -1050,16 +1227,19 @@ MODAL
 }
 
 
-/* =========================
-OBSERVAÇÃO DO PRODUTO
-========================= */
+/* ==========================================
+   OBSERVAÇÃO
+========================================== */
 
 .observation-field {
+
     margin:
         28px 0 25px;
 }
 
+
 .observation-field label {
+
     display: block;
 
     margin-bottom: 8px;
@@ -1075,7 +1255,9 @@ OBSERVAÇÃO DO PRODUTO
     text-transform: uppercase;
 }
 
+
 .observation-field textarea {
+
     width: 100%;
 
     min-height: 105px;
@@ -1102,11 +1284,14 @@ OBSERVAÇÃO DO PRODUTO
     transition: .25s ease;
 }
 
+
 .observation-field textarea::placeholder {
     color: #666;
 }
 
+
 .observation-field textarea:focus {
+
     border-color: var(--orange);
 
     box-shadow:
@@ -1114,7 +1299,9 @@ OBSERVAÇÃO DO PRODUTO
         rgba(255,106,0,.08);
 }
 
+
 .observation-field small {
+
     display: block;
 
     margin-top: 6px;
@@ -1125,16 +1312,18 @@ OBSERVAÇÃO DO PRODUTO
 }
 
 
-/* =========================
-TOAST
-========================= */
+/* ==========================================
+   TOAST
+========================================== */
 
 .toast {
+
     position: fixed;
 
     z-index: 3000;
 
     right: 25px;
+
     bottom: 25px;
 
     padding:
@@ -1156,7 +1345,9 @@ TOAST
     transition: .3s ease;
 }
 
+
 .toast.show {
+
     transform:
         translateY(0);
 
@@ -1164,15 +1355,17 @@ TOAST
 }
 
 
-/* =========================
-RANCHO
-========================= */
+/* ==========================================
+   RANCHO
+========================================== */
 
 .about-section {
     padding: 120px 0;
 }
 
+
 .about-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1183,7 +1376,9 @@ RANCHO
     align-items: center;
 }
 
+
 .about-text p {
+
     max-width: 620px;
 
     margin-top: 20px;
@@ -1191,7 +1386,9 @@ RANCHO
     color: var(--gray);
 }
 
+
 .about-card {
+
     aspect-ratio: 1;
 
     display: flex;
@@ -1201,6 +1398,7 @@ RANCHO
     justify-content: center;
 
     background:
+
         radial-gradient(
             circle,
             rgba(255,106,0,.22),
@@ -1213,8 +1411,11 @@ RANCHO
         1px solid var(--border);
 }
 
+
 .about-card-inner {
+
     width: 70%;
+
     height: 70%;
 
     display: flex;
@@ -1231,7 +1432,9 @@ RANCHO
         1px solid rgba(255,106,0,.35);
 }
 
+
 .about-card-inner span {
+
     color: var(--orange);
 
     letter-spacing: 5px;
@@ -1239,7 +1442,9 @@ RANCHO
     font-weight: 800;
 }
 
+
 .about-card-inner strong {
+
     margin-top: 20px;
 
     font-family: "Bebas Neue", sans-serif;
@@ -1249,13 +1454,17 @@ RANCHO
     line-height: .85;
 }
 
+
 .values-section {
+
     padding: 110px 0;
 
     background: var(--black-2);
 }
 
+
 .values-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -1266,7 +1475,9 @@ RANCHO
     margin-top: 60px;
 }
 
+
 .value-card {
+
     padding: 40px;
 
     background: var(--black);
@@ -1275,26 +1486,33 @@ RANCHO
         1px solid var(--border);
 }
 
+
 .value-icon {
     font-size: 35px;
 }
 
+
 .value-card h3 {
+
     margin:
         20px 0 10px;
 
     font-size: 23px;
 }
 
+
 .value-card p {
     color: var(--gray);
 }
+
 
 .location-section {
     padding: 110px 0;
 }
 
+
 .location-card {
+
     display: grid;
 
     grid-template-columns:
@@ -1310,24 +1528,31 @@ RANCHO
         1px solid var(--border);
 }
 
+
 .location-card p {
+
     margin-top: 25px;
 
     color: var(--gray);
 }
 
+
 .location-info {
+
     padding-left: 35px;
 
     border-left:
         1px solid var(--border);
 }
 
+
 .location-info strong {
     color: var(--orange);
 }
 
+
 .location-info small {
+
     display: block;
 
     margin-bottom: 25px;
@@ -1336,16 +1561,19 @@ RANCHO
 }
 
 
-/* =========================
-CARRINHO
-========================= */
+/* ==========================================
+   CARRINHO
+========================================== */
 
 .cart-page {
+
     padding:
         70px 0 120px;
 }
 
+
 .cart-layout {
+
     display: grid;
 
     grid-template-columns:
@@ -1356,7 +1584,9 @@ CARRINHO
     align-items: start;
 }
 
+
 .cart-items {
+
     display: flex;
 
     flex-direction: column;
@@ -1364,7 +1594,9 @@ CARRINHO
     gap: 12px;
 }
 
+
 .cart-item {
+
     display: grid;
 
     grid-template-columns:
@@ -1380,17 +1612,22 @@ CARRINHO
         1px solid var(--border);
 }
 
+
 .cart-item h3 {
     font-size: 20px;
 }
 
+
 .cart-item p {
+
     color: #888;
 
     font-size: 14px;
 }
 
+
 .cart-item-price {
+
     margin-top: 8px;
 
     color: var(--orange);
@@ -1398,7 +1635,9 @@ CARRINHO
     font-weight: 800;
 }
 
+
 .cart-controls {
+
     display: flex;
 
     align-items: center;
@@ -1408,8 +1647,11 @@ CARRINHO
     margin-top: 15px;
 }
 
+
 .qty-btn {
+
     width: 32px;
+
     height: 32px;
 
     border:
@@ -1422,7 +1664,9 @@ CARRINHO
     border-radius: 4px;
 }
 
+
 .remove-btn {
+
     margin-left: 10px;
 
     background: transparent;
@@ -1434,7 +1678,9 @@ CARRINHO
     font-size: 13px;
 }
 
+
 .cart-item-observation {
+
     margin-top: 12px;
 
     padding:
@@ -1453,11 +1699,14 @@ CARRINHO
     line-height: 1.5;
 }
 
+
 .cart-item-observation strong {
     color: var(--orange);
 }
 
+
 .cart-summary {
+
     position: sticky;
 
     top: 110px;
@@ -1470,13 +1719,17 @@ CARRINHO
         1px solid var(--border);
 }
 
+
 .cart-summary h2 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size: 40px;
 }
 
+
 .summary-line {
+
     display: flex;
 
     justify-content: space-between;
@@ -1492,7 +1745,9 @@ CARRINHO
         1px solid var(--border);
 }
 
+
 .summary-total {
+
     color: var(--orange);
 
     font-size: 24px;
@@ -1500,7 +1755,9 @@ CARRINHO
     font-weight: 800;
 }
 
+
 .empty-cart {
+
     padding: 80px 20px;
 
     text-align: center;
@@ -1511,20 +1768,30 @@ CARRINHO
         1px solid var(--border);
 }
 
+
 .empty-cart h2 {
+
     font-family: "Bebas Neue", sans-serif;
 
     font-size: 50px;
 }
 
+
 .empty-cart p {
+
     margin:
         10px 0 30px;
 
     color: var(--gray);
 }
 
+
+/* ==========================================
+   CHECKOUT
+========================================== */
+
 .checkout-box label {
+
     display: block;
 
     margin-bottom: 18px;
@@ -1534,8 +1801,10 @@ CARRINHO
     font-weight: 700;
 }
 
+
 .checkout-box input,
 .checkout-box textarea {
+
     width: 100%;
 
     margin-top: 7px;
@@ -1554,30 +1823,199 @@ CARRINHO
     border-radius: 4px;
 }
 
+
 .checkout-box textarea {
+
     min-height: 110px;
 
     resize: vertical;
 }
 
+
 .checkout-box input:focus,
 .checkout-box textarea:focus {
+
     border-color: var(--orange);
 }
 
 
-/* =========================
-FOOTER
-========================= */
+/* ==========================================
+   ENTREGA / RETIRADA
+========================================== */
+
+.delivery-choice {
+
+    margin:
+        25px 0;
+}
+
+
+.form-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.delivery-options {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.delivery-option {
+
+    position: relative;
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    margin: 0 !important;
+
+    background: var(--black);
+
+    border:
+        1px solid var(--border);
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+
+.delivery-option:hover {
+
+    border-color:
+        rgba(255,106,0,.5);
+}
+
+
+.delivery-option:has(input:checked) {
+
+    border-color: var(--orange);
+
+    background:
+        rgba(255,106,0,.07);
+}
+
+
+.delivery-option input {
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    accent-color: var(--orange);
+}
+
+
+.delivery-option > span {
+
+    font-size: 25px;
+}
+
+
+.delivery-option strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.delivery-option small {
+
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+.delivery-fields {
+
+    padding: 22px;
+
+    margin:
+        20px 0 25px;
+
+    background:
+        rgba(255,106,0,.04);
+
+    border:
+        1px solid var(--border);
+}
+
+
+.delivery-fields h3 {
+
+    margin-bottom: 20px;
+
+    color: var(--orange);
+
+    font-size: 18px;
+}
+
+
+.delivery-fields label {
+
+    margin-bottom: 15px;
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        .4fr 1fr;
+
+    gap: 12px;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 .footer {
+
     background: #050505;
 
     border-top:
         1px solid var(--border);
 }
 
+
 .footer-content {
+
     min-height: 180px;
 
     display: grid;
@@ -1590,7 +2028,9 @@ FOOTER
     align-items: center;
 }
 
+
 .footer h3 {
+
     color: var(--orange);
 
     font-family: "Bebas Neue", sans-serif;
@@ -1598,13 +2038,17 @@ FOOTER
     font-size: 35px;
 }
 
+
 .footer p {
+
     color: #777;
 
     font-size: 14px;
 }
 
+
 .footer-bottom {
+
     padding: 20px;
 
     border-top:
@@ -1618,9 +2062,9 @@ FOOTER
 }
 
 
-/* =========================
-RESPONSIVO
-========================= */
+/* ==========================================
+   RESPONSIVO
+========================================== */
 
 @media (max-width: 850px) {
 
@@ -1640,11 +2084,13 @@ RESPONSIVO
 
 
     .nav-menu {
+
         position: absolute;
 
         top: 75px;
 
         left: 0;
+
         right: 0;
 
         display: none;
@@ -1671,6 +2117,7 @@ RESPONSIVO
 
 
     .nav-menu a {
+
         padding: 14px 0;
 
         border-bottom:
@@ -1706,6 +2153,7 @@ RESPONSIVO
     .featured-grid,
     .info-grid,
     .values-grid {
+
         grid-template-columns: 1fr;
     }
 
@@ -1714,12 +2162,15 @@ RESPONSIVO
     .about-grid,
     .location-card,
     .cart-layout {
+
         grid-template-columns: 1fr;
     }
 
 
     .split-content {
-        padding: 80px 30px;
+
+        padding:
+            80px 30px;
     }
 
 
@@ -1734,6 +2185,7 @@ RESPONSIVO
 
 
     .location-info {
+
         padding-left: 0;
 
         padding-top: 30px;
@@ -1751,6 +2203,7 @@ RESPONSIVO
 
 
     .footer-content {
+
         grid-template-columns: 1fr;
 
         padding: 40px 0;
@@ -1761,12 +2214,18 @@ RESPONSIVO
         position: static;
     }
 
+
+    .delivery-options {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
 @media (max-width: 500px) {
 
     .container {
+
         width:
             min(
                 100% - 28px,
@@ -1795,6 +2254,7 @@ RESPONSIVO
     .about-text h2,
     .cta-section h2,
     .location-card h2 {
+
         font-size: 52px;
     }
 
@@ -1825,6 +2285,7 @@ RESPONSIVO
 
 
     .page-header {
+
         padding:
             80px 0 60px;
     }
@@ -1836,6 +2297,11 @@ RESPONSIVO
 
 
     .cart-item {
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-row {
         grid-template-columns: 1fr;
     }
 

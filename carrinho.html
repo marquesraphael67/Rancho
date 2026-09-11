@@ -10,7 +10,9 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Carrinho | Rancho Casa de Lanches</title>
+    <title>
+        Carrinho | Rancho Casa de Lanches
+    </title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -122,7 +124,9 @@
 </main>
 
 
-<!-- CHECKOUT -->
+<!-- ==========================================
+     CHECKOUT
+========================================== -->
 
 <div
     class="modal"
@@ -151,10 +155,12 @@
 
 
         <p>
-            Preencha seus dados para enviar
-            o pedido pelo WhatsApp.
+            Preencha os dados para enviar
+            seu pedido pelo WhatsApp.
         </p>
 
+
+        <!-- NOME -->
 
         <label>
 
@@ -170,6 +176,152 @@
         </label>
 
 
+        <!-- FORMA DE RECEBIMENTO -->
+
+        <div class="delivery-choice">
+
+            <label class="form-label">
+                Como você quer receber?
+            </label>
+
+
+            <div class="delivery-options">
+
+                <label class="delivery-option">
+
+                    <input
+                        type="radio"
+                        name="deliveryType"
+                        value="retirada"
+                        checked
+                    >
+
+                    <span>
+                        🏪
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Retirar no local
+                        </strong>
+
+                        <small>
+                            Rua Macieió, 53
+                        </small>
+
+                    </div>
+
+                </label>
+
+
+                <label class="delivery-option">
+
+                    <input
+                        type="radio"
+                        name="deliveryType"
+                        value="entrega"
+                    >
+
+                    <span>
+                        🛵
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Entrega
+                        </strong>
+
+                        <small>
+                            Levamos até você
+                        </small>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <!-- ENDEREÇO -->
+
+        <div
+            id="deliveryFields"
+            class="delivery-fields hidden"
+        >
+
+            <h3>
+                Endereço de entrega
+            </h3>
+
+
+            <label>
+
+                Rua
+
+                <input
+                    type="text"
+                    id="customerStreet"
+                    maxlength="120"
+                    placeholder="Nome da rua"
+                >
+
+            </label>
+
+
+            <div class="form-row">
+
+                <label>
+
+                    Número
+
+                    <input
+                        type="text"
+                        id="customerNumber"
+                        maxlength="20"
+                        placeholder="Nº"
+                    >
+
+                </label>
+
+
+                <label>
+
+                    Bairro
+
+                    <input
+                        type="text"
+                        id="customerNeighborhood"
+                        maxlength="80"
+                        placeholder="Bairro"
+                    >
+
+                </label>
+
+            </div>
+
+
+            <label>
+
+                Complemento
+
+                <input
+                    type="text"
+                    id="customerComplement"
+                    maxlength="100"
+                    placeholder="Casa, apartamento, referência..."
+                >
+
+            </label>
+
+        </div>
+
+
+        <!-- OBSERVAÇÃO GERAL -->
+
         <label>
 
             Observação do pedido
@@ -177,7 +329,7 @@
             <textarea
                 id="customerObservation"
                 maxlength="300"
-                placeholder="Ex.: entregar na portaria, tocar a campainha..."
+                placeholder="Ex.: tocar a campainha, entregar na portaria..."
             ></textarea>
 
         </label>
