@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardápio | Rancho Casa de Lanches</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Rancho Casa de Lanches">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="cardapio.html" class="active">
+                Cardápio
+            </a>
+
+            <a href="rancho.html">
+                O Rancho
+            </a>
+
+            <a href="https://www.instagram.com/agrodronetec_epitacio/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="carrinho.html" class="cart-link">
+                🛒 Carrinho
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+    <div class="container">
+
+        <span class="section-kicker">
+            RANCHO CASA DE LANCHES
+        </span>
+
+        <h1>
+            Nosso <span>Cardápio</span>
+        </h1>
+
+        <p>
+            Escolha seu favorito e monte seu pedido.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="menu-section">
+
+    <div class="container">
+
+        <div class="menu-toolbar">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔎 Procurar no cardápio..."
+            >
+
+        </div>
+
+
+        <div class="categories" id="categories">
+
+            <button class="category-btn active"
+                    data-category="todos">
+                Todos
+            </button>
+
+            <button class="category-btn"
+                    data-category="hamburgueres">
+                🍔 Hambúrgueres
+            </button>
+
+            <button class="category-btn"
+                    data-category="kids">
+                👦 Rancho Kids
+            </button>
+
+            <button class="category-btn"
+                    data-category="porcoes">
+                🍟 Porções
+            </button>
+
+            <button class="category-btn"
+                    data-category="bebidas">
+                🥤 Bebidas
+            </button>
+
+            <button class="category-btn"
+                    data-category="sobremesas">
+                🍰 Sobremesas
+            </button>
+
+        </div>
+
+
+        <div id="menuContainer"></div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- MODAL ACRÉSCIMOS -->
+
+<div class="modal" id="customizerModal">
+
+    <div class="modal-box">
+
+        <button class="modal-close" id="closeCustomizer">
+            ×
+        </button>
+
+        <span class="section-kicker">
+            PERSONALIZE
+        </span>
+
+        <h2 id="customizerTitle">
+            Seu pedido
+        </h2>
+
+        <p id="customizerDescription"></p>
+
+
+        <div class="customizer-price">
+            <span>Total</span>
+            <strong id="customizerPrice">
+                R$ 0,00
+            </strong>
+        </div>
+
+
+        <h3 class="addons-title">
+            Quer acrescentar algo?
+        </h3>
+
+        <div id="addonsContainer"></div>
+
+
+        <button class="btn btn-primary full-btn"
+                id="addCustomized">
+
+            ADICIONAR AO CARRINHO
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="toast" id="toast">
+    Adicionado ao carrinho!
+</div>
+
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <h3>RANCHO</h3>
+            <p>Casa de Lanches</p>
+        </div>
+
+        <div>
+            <p>WhatsApp</p>
+            <p>(18) 98156-7633</p>
+        </div>
+
+        <div>
+            <p>19h às 23h30</p>
+            <p>Quinta a terça</p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

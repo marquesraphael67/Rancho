@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho | Rancho Casa de Lanches</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Rancho Casa de Lanches">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="cardapio.html">
+                Cardápio
+            </a>
+
+            <a href="rancho.html">
+                O Rancho
+            </a>
+
+            <a href="https://www.instagram.com/agrodronetec_epitacio/"
+               target="_blank">
+                Instagram
+            </a>
+
+            <a href="carrinho.html"
+               class="cart-link active">
+                🛒 Carrinho
+                <span id="cartCount">0</span>
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+    <div class="container">
+
+        <span class="section-kicker">
+            SEU PEDIDO
+        </span>
+
+        <h1>
+            Meu <span>Carrinho</span>
+        </h1>
+
+        <p>
+            Confira seus itens antes de finalizar.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="cart-page">
+
+    <div class="container">
+
+        <div id="cartPageContainer">
+
+            <!-- preenchido pelo JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div>
+            <h3>RANCHO</h3>
+            <p>Casa de Lanches</p>
+        </div>
+
+        <div>
+            <p>WhatsApp</p>
+            <p>(18) 98156-7633</p>
+        </div>
+
+        <div>
+            <p>Rua Macieió, 53</p>
+            <p>Presidente Epitácio - SP</p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- CHECKOUT -->
+
+<div class="modal" id="checkoutModal">
+
+    <div class="modal-box checkout-box">
+
+        <button class="modal-close"
+                id="closeCheckout">
+            ×
+        </button>
+
+        <span class="section-kicker">
+            FINALIZAR PEDIDO
+        </span>
+
+        <h2>
+            Só falta uma coisa.
+        </h2>
+
+        <p>
+            Preencha seus dados para enviar
+            o pedido pelo WhatsApp.
+        </p>
+
+
+        <label>
+            Seu nome
+            <input type="text"
+                   id="customerName"
+                   placeholder="Digite seu nome">
+        </label>
+
+
+        <label>
+            Observações
+            <textarea
+                id="customerObservation"
+                placeholder="Ex.: sem cebola, ponto da carne..."></textarea>
+        </label>
+
+
+        <button class="btn btn-primary full-btn"
+                id="sendWhatsApp">
+
+            ENVIAR PELO WHATSAPP
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
